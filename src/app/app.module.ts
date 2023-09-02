@@ -12,8 +12,6 @@ import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { NgModule } from '@angular/core';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
