@@ -2122,7 +2122,7 @@ textarea.form-control {
   position: absolute;
 }
 .navbar.navbar-transparent {
-  padding-top: 25px;
+  padding-top: 10px;
 }
 .navbar .logo-container {
   margin-top: 5px;
@@ -2672,8 +2672,12 @@ textarea.form-control {
   text-align: center;
 }
 
-.card-register .btn {
+.card-register .first-btn {
   margin-top: 30px;
+}
+
+.card-register .second-btn {
+  margin-top: 0px;
 }
 
 .card-register .forgot {
