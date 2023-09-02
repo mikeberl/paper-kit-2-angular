@@ -5,7 +5,8 @@
     "module": "es2015",
     "baseUrl": "",
     "types": [
-      "@angular/localize"
+      "@angular/localize",
+      "node"
     ]
   },
   "exclude": [
