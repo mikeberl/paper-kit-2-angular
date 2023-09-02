@@ -64,8 +64,7 @@
 
                       <div class="nav-tabs-navigation">
                           <div class="nav-tabs-wrapper">
-                            <!-- [justify]="'center'" -->
-                              <!-- <ngb-tabset >
+                              <!-- <ngb-tabset [justify]="'center'">
                                   <ngb-tab title="Home">
                                       <ng-template ngbTabContent>
                                           <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.</p>
@@ -82,6 +81,32 @@
                                       </ng-template>
                                   </ngb-tab>
                               </ngb-tabset> -->
+                              <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+                                </li>
+                              </ul>
+                              
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                  <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.</p>
+                                </div>
+                              
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                  <p>Here is your profile.</p>
+                                </div>
+                              
+                                <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                                  <p>Here are your messages.</p>
+                                </div>
+                              </div>
+                              
                           </div>
                       </div>
 
