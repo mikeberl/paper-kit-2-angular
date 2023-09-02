@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pk2-angular": {    
+    "pk2-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -121,6 +121,7 @@
       }
     }
   },
+  "defaultProject": "pk2-angular",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
