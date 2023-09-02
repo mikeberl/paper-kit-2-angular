@@ -6,17 +6,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
+import { NavbarComponent } from 'app/shared/navbar/navbar.component';
+
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        NgbModule,
+        NgbModule
     ],
     declarations: [
         LandingComponent,
         SignupComponent,
-        ProfileComponent
+        ProfileComponent,
+        NavbarComponent
     ]
 })
 export class ExamplesModule { }

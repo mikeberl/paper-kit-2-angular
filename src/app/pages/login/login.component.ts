@@ -37,6 +37,8 @@ export class LoginComponent {
   }
 
   login() {
+    console.log(this.username);
+    console.log(this.password);
     if (!this.username || !this.password) {
       this.emptyFields = true;
       this.invalidCredentials = false;

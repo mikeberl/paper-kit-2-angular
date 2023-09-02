@@ -5739,7 +5739,7 @@ textarea.form-control {
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
-  max-height: 999px;
+  max-height: 100vh;
   overflow: hidden;
   position: relative;
   width: 100%;
