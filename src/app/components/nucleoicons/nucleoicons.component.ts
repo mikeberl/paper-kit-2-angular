@@ -6,8 +6,8 @@ import { Component, OnInit, Inject, Renderer2, ElementRef, OnDestroy } from '@an
     styleUrls: ['./nucleoicons.component.scss']
 })
 export class NucleoiconsComponent implements OnInit, OnDestroy {
-
-    constructor( private element : ElementRef) {}
+    // private element : ElementRef
+    constructor( ) {}
 
     ngOnInit() {
         const body = document.getElementsByTagName('app-nucleoicons')[0];
