@@ -3,7 +3,7 @@ import { NgbModule, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -18,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MainNavbarComponent } from './shared/main-navbar/main-navbar.component';
 import { ProfilePreviewComponent } from './pages/home/profile-preview/profile-preview.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { AuthInterceptor } from './guard/AuthInterceptor';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,13 @@ import { SettingsComponent } from './pages/settings/settings.component';
     HttpClientModule,
     CommonModule, 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

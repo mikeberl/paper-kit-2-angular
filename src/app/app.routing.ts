@@ -11,8 +11,10 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { AuthGuard } from './guard/AuthGuard';
 
 const routes: Routes =[
+    { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
     { path: '', redirectTo: 'xxx', pathMatch: 'full' },
     { path: 'xxx',             component: ComponentsComponent },
     { path: 'user-profile',     component: ProfileComponent },
@@ -21,7 +23,7 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'home',      component: HomeComponent },
-    { path: 'settings', component: SettingsComponent}
+    
 ];
 
 @NgModule({
