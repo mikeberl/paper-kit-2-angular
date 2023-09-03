@@ -1,24 +1,81 @@
-<nav class="navbar navbar-expand-lg bg-primary">
-    <div class="container">
-        <a class="navbar-brand navbar-btn" href="#">
-
-            <i class="nc-icon x2 nc-user-run"></i>
-            Menu
-        </a>
-        <a class="navbar-brand navbar-btn" href="#">
-
-            <i class="nc-icon x2 nc-user-run"></i>
-            Menu
-        </a>
-        <a class="navbar-brand navbar-btn" href="#">
-
-            <i class="nc-icon x2 nc-user-run"></i>
-            Menu
-        </a>
-        <a class="navbar-brand navbar-btn" href="#">
-
-            <i class="nc-icon x2 nc-user-run"></i>
-            Menu
-        </a>
+<div class="wrapper"> 
+  <app-main-navbar></app-main-navbar>
+  <app-profile-preview></app-profile-preview>
+  <br/>
+  <div class="section-no-pad">
+    <div class="container matches-container">
+      <label>Match History</label>
+      <div class="row matches-row">
+        <div class="bar-container" *ngFor="let bar of bars">
+            <div class="label green">+15</div>            
+        </div>
+      </div>
     </div>
-</nav>
+  </div>  
+    <!-- <div class="nav-tabs-navigation">
+      <div class="nav-tabs-wrapper">
+          <ul class="nav nav-tabs custom-tabset" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="follows-tab" data-toggle="tab" href="#follows" role="tab" aria-controls="follows" aria-selected="true">Follows</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="following-tab" data-toggle="tab" href="#following" role="tab" aria-controls="following" aria-selected="false">Following</a>
+              </li>
+            </ul>
+            
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="follows" role="tabpanel" aria-labelledby="follows-tab">
+                <div class="row following">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <ul class="list-unstyled follows">
+                      <li>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-2 ml-auto mr-auto">
+                            <img src="./assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                          </div>
+                          <div class="col-md-7 col-sm-4 ml-auto">
+                            <h6>Flume<br/><small>Musical Producer</small></h6>
+                          </div>
+                          <div class="col-md-3 col-sm-2 ml-auto mr-auto">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked="">
+                                <span class="form-check-sign"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <hr />
+                      <li>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-2 ml-auto mr-auto">
+                            <img src="./assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                          </div>
+                          <div class="col-md-7 col-sm-4 ml-auto">
+                            <h6>Banks<br /><small>Singer</small></h6>
+                          </div>
+                          <div class="col-md-3 col-sm-2 ml-auto mr-auto">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked="">
+                                <span class="form-check-sign"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="tab-pane fade" id="following" role="tabpanel" aria-labelledby="following-tab">
+                <h3 class="text-muted">Not following anyone yet :(</h3>
+                <br>
+                <button class="btn btn-warning btn-round">Find artists</button>
+              </div>
+            </div>
+        </div>
+    </div> -->
+</div>

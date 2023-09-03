@@ -10,6 +10,7 @@ import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'xxx', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes =[
     { path: 'login',           component: LoginComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'home',      component: HomeComponent }
+    { path: 'home',      component: HomeComponent },
+    { path: 'settings', component: SettingsComponent}
 ];
 
 @NgModule({

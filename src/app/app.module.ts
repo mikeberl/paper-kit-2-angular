@@ -1,5 +1,5 @@
 import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,13 +15,19 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from './pages/login/login.component';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
+import { MainNavbarComponent } from './shared/main-navbar/main-navbar.component';
+import { ProfilePreviewComponent } from './pages/home/profile-preview/profile-preview.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MainNavbarComponent,
+    ProfilePreviewComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,7 @@ import { HomeComponent } from './pages/home/home.component';
     ExamplesModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
