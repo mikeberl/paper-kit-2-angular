@@ -13,7 +13,7 @@ import { filter, Subscription } from 'rxjs';
 export class AppComponent implements OnInit {
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
-
+    // commento che non fa niente
     constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
     ngOnInit() {
         var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
