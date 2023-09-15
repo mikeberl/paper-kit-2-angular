@@ -14,7 +14,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { AuthGuard } from './guard/AuthGuard';
 
 const routes: Routes =[
-    { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
+    // { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
+    { path: 'settings', component: SettingsComponent},
     { path: '', redirectTo: 'xxx', pathMatch: 'full' },
     { path: 'xxx',             component: ComponentsComponent },
     { path: 'user-profile',     component: ProfileComponent },
