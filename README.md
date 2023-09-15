@@ -1,10 +1,13 @@
 # Passaggi per caricare scaricare da github x Cri
 
 git pull -> scaricare gli aggiornarmi 
+
 git commit -a -m  "Il commento che vuoi fare" -> serve per commentare i cambiamenti
+
 git push -> caricare 
 
 git status -> cosa é cambiato
+
 git add *  (oppure) git add nome_del_file -> per aggiungere file a git
 
 
