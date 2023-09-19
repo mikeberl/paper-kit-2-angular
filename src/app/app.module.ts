@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
@@ -19,6 +18,11 @@ import { MainNavbarComponent } from './shared/main-navbar/main-navbar.component'
 import { ProfilePreviewComponent } from './pages/home/profile-preview/profile-preview.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { AuthInterceptor } from './guard/AuthInterceptor';
+import { RankingListComponent } from './pages/home/ranking-list/ranking-list.component';
+import { LastMatchesComponent } from './pages/home/last-matches/last-matches.component';
+import { LeaguesComponent } from './pages/leagues/leagues.component';
+import { MatchesComponent } from './pages/matches/matches.component';
+import { BackNavbarComponent } from './shared/back-navbar/back-navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,12 @@ import { AuthInterceptor } from './guard/AuthInterceptor';
     HomeComponent,
     MainNavbarComponent,
     ProfilePreviewComponent,
-    SettingsComponent
+    SettingsComponent,
+    RankingListComponent,
+    LastMatchesComponent,
+    LeaguesComponent,
+    MatchesComponent,
+    BackNavbarComponent,
   ],
   imports: [
     BrowserModule,

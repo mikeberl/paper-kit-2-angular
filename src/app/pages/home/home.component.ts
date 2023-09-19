@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  bars = [
-    { label: '+15' },
-    { label: '+15' },
-    { label: '+15' },
-    { label: '+15' },
-    { label: '+15' },
-  ];
+  
 }

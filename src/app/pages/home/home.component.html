@@ -1,15 +1,8 @@
+<app-main-navbar></app-main-navbar>
 <div class="wrapper"> 
-  <app-main-navbar></app-main-navbar>
   <app-profile-preview></app-profile-preview>
   <br/>
-  <div class="section-no-pad">
-    <div class="container matches-container">
-      <label>Match History</label>
-      <div class="row matches-row">
-        <div class="bar-container" *ngFor="let bar of bars">
-            <div class="label green">+15</div>            
-        </div>
-      </div>
-    </div>
-  </div>  
+  <app-last-matches></app-last-matches>
+  <br/>
+  <app-ranking-list></app-ranking-list>
 </div>
