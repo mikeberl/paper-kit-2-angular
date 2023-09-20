@@ -1,0 +1,53 @@
+.match-panel-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.45em;
+    margin: 10px;
+    padding: 5px;
+}
+
+.match-date {
+    padding-left: 5px;
+}
+
+.panel-body {
+    border: 1px solid grey;
+    font-size: 1rem;
+}
+
+.team-panel-section {
+    padding: 10px;
+}
+
+.teams-preview { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.points-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    margin: 10px 7px 5px;
+    border-top: 1px solid #ccc; /* Aggiungi una linea grigia leggera come divisoria sopra a points-preview */
+}
+
+.br-teams {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.br-points {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.insertion-info {
+    font-size: 0.7rem;
+    color: solid #ccc;
+    margin-left: 10px;
+}

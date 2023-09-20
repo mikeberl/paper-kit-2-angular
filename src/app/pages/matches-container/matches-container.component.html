@@ -1,0 +1,23 @@
+<app-back-navbar></app-back-navbar>
+<div class="wrapper">
+<div class="section">
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <ng-container *ngFor="let tabGroup of tabGroups; let i = index">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab{{ i }}-tab" data-toggle="tab" href="#tab{{ i }}" role="tab" aria-controls="tab{{ i }}" [attr.aria-selected]="i === 0" [class.active]="i === 0">{{ leagues[i] }}</a>
+            </li>
+            </ng-container>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <ng-container *ngFor="let tabGroup of tabGroups; let i = index">
+            <div class="tab-pane fade show" id="tab{{ i }}" role="tabpanel" aria-labelledby="tab{{ i }}-tab" [class.show]="i === 0" [class.active]="i === 0">
+                <app-matches [panels]="tabGroup"></app-matches>
+            </div>
+            </ng-container>
+        </div>
+        </div>
+    </div>
+</div>
+  
+

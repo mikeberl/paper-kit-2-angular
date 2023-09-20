@@ -1,4 +1,69 @@
-<app-back-navbar></app-back-navbar>
-<div class="wrapper">
-    
-</div>
+<div class="row">
+    <div class="col-md-12">
+      <ng-container *ngFor="let group of dateGroups | keyvalue">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <a>
+                {{ getMonthName(group.key) }}
+              </a>
+            </h5>
+          </div>
+          <div>
+            <ng-container *ngFor="let panel of group.value">
+              <div class="panel panel-default ">
+                <div class="panel-heading match-panel-heading" role="tab">
+                    <div>
+                        <span class="badge badge-success" *ngIf="openPanelId != panel.date">+15</span>
+                        <a class="match-date" (click)="togglePanel(panel)">
+                            {{ formatDate(panel.date) }}
+                        </a>
+                        <a class="insertion-info" *ngIf="openPanelId != panel.date" (click)="togglePanel(panel)"> Inserted by: Michele B</a>
+                    </div>
+                    <div class="report" *ngIf="openPanelId != panel.date">
+                        <button class="btn btn-info btn-just-icon btn-sm" (click)="report(panel)">
+                        <i class="nc-icon nc-minimal-down" (click)="togglePanel(panel)"></i>
+                        </button>
+                    </div>
+                    <div class="report" *ngIf="openPanelId === panel.date">
+                        <button class="btn btn-danger btn-just-icon btn-sm" (click)="report(panel)">
+                        <i class="fa fa-flag"></i>
+                        </button>
+                    </div>
+                </div>
+                <div [id]="'collapse' + panel.date" class="collapse" [class.show]="openPanelId === panel.date" role="tabpanel">
+                  <div class="panel-body">
+                    <div class="teams-preview">
+                        <div class="team-panel-section winners">
+                            <span class="label label-success">Success</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-success">Success</span>
+                            <span class="label label-success">Success</span>
+                        </div>
+                        <div class="br-teams"></div>
+                        <div class="team-panel-section winners">
+                            <span class="label label-danger">Danger</span>
+                            <span class="label label-danger">Danger</span>
+                            <span class="label label-danger">Danger</span>
+                            <span class="label label-danger">Danger</span>
+                        </div>
+                    </div>
+                    <div class="points-preview">
+                        <div class="">
+                            <span class="badge badge-success">+15</span>
+                        </div>
+                        <div class="br-points"></div>
+                        <div class="">
+                            <span class="badge badge-danger">-15</span>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

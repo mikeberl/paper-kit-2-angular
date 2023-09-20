@@ -14,6 +14,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { AuthGuard } from './guard/AuthGuard';
 import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { MatchesComponent } from './pages/matches/matches.component';
+import { MatchesContainerComponent } from './pages/matches-container/matches-container.component';
 
 const routes: Routes =[
     // { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
@@ -27,7 +28,7 @@ const routes: Routes =[
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'home',      component: HomeComponent },
     { path: 'leagues',    component: LeaguesComponent},
-    { path: 'matches',    component: MatchesComponent}
+    { path: 'matches',    component: MatchesContainerComponent}
     
 ];
 

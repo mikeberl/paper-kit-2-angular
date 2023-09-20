@@ -23,6 +23,7 @@ import { LastMatchesComponent } from './pages/home/last-matches/last-matches.com
 import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { MatchesComponent } from './pages/matches/matches.component';
 import { BackNavbarComponent } from './shared/back-navbar/back-navbar.component';
+import { MatchesContainerComponent } from './pages/matches-container/matches-container.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { BackNavbarComponent } from './shared/back-navbar/back-navbar.component'
     LeaguesComponent,
     MatchesComponent,
     BackNavbarComponent,
+    MatchesContainerComponent,
   ],
   imports: [
     BrowserModule,
