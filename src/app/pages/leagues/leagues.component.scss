@@ -1,0 +1,35 @@
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    font-size: .765625rem;
+    margin: 5px;
+}
+a {
+text-decoration:none;    
+}
+
+.section-footer {
+    padding-top: 70px;
+}
+
+.position {
+    text-align: end;
+}
+
+.section-leagues {
+    padding: 85px 0px 0px;
+    position: relative;
+    background-color: #fff;
+}
+
+.search-col {
+    margin-bottom: 10px;
+}
+
+.league-list-group-item {
+    position: relative;
+    display: block;
+    padding: .25rem 0.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}

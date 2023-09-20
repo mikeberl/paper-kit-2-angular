@@ -1,6 +1,49 @@
 <app-main-navbar></app-main-navbar>
 <div class="wrapper">
-    <div class="section">
-        <app-ranking-list></app-ranking-list>
-    </div>   
+    <div class="section-leagues">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 search-col">
+                    <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                        <input type="text" class="form-control" placeholder="Search League" aria-describedby="basic-addon1" (focus)="focus=true" (blur)="focus=false" >
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-xl-12 mb-3 mb-lg-5">
+                <div class="card">
+                  <div class="">
+                    <ul class="list-group list-group-flush">
+                      <li class="league-list-group-item pt-0" *ngFor="let client of clients">
+                        <div class="d-flex align-items-center">
+                          <div class="flex-shrink-0 me-3">
+                            <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h5 class="mb-0">{{ client.name }}</h5>
+                            <a> Host by: Roundnet Bolzano</a>
+                          </div>
+                          <div class="flex-shrink-0 position">
+                            <span class="mb-0 text-muted">
+                                Players
+                            </span>
+                            <p>{{ client.amount }}</p>
+                            
+                          </div>
+                        </div>
+                      </li>
+                    </ul>            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-info btn-block btn-round">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    Create a League
+                </button>
+            </div>
+        </div>    
+    </div>      
 </div>
