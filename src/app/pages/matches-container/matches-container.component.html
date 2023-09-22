@@ -9,6 +9,13 @@
             </li>
             </ng-container>
         </ul>
+        <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" checked="">
+              My games
+              <span class="form-check-sign"></span>
+            </label>
+        </div>
         <div class="tab-content" id="myTabContent">
             <ng-container *ngFor="let tabGroup of tabGroups; let i = index">
             <div class="tab-pane fade show" id="tab{{ i }}" role="tabpanel" aria-labelledby="tab{{ i }}-tab" [class.show]="i === 0" [class.active]="i === 0">
