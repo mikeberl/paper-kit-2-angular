@@ -15,6 +15,8 @@ import { AuthGuard } from './guard/AuthGuard';
 import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { MatchesComponent } from './pages/matches/matches.component';
 import { MatchesContainerComponent } from './pages/matches-container/matches-container.component';
+import { CreateMatchComponent } from './pages/create-match/create-match.component';
+import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
 
 const routes: Routes =[
     // { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
@@ -28,7 +30,10 @@ const routes: Routes =[
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'home',      component: HomeComponent },
     { path: 'leagues',    component: LeaguesComponent},
-    { path: 'matches',    component: MatchesContainerComponent}
+    { path: 'matches',    component: MatchesContainerComponent},
+    { path: 'create-match', component: CreateMatchComponent},
+    { path: 'league', component: LeagueRankingComponent}
+
     
 ];
 

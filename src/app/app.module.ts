@@ -24,6 +24,9 @@ import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { MatchesComponent } from './pages/matches/matches.component';
 import { BackNavbarComponent } from './shared/back-navbar/back-navbar.component';
 import { MatchesContainerComponent } from './pages/matches-container/matches-container.component';
+import { CreateMatchComponent } from './pages/create-match/create-match.component';
+import { LeagueNavbarComponent } from './shared/league-navbar/league-navbar.component';
+import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { MatchesContainerComponent } from './pages/matches-container/matches-con
     MatchesComponent,
     BackNavbarComponent,
     MatchesContainerComponent,
+    CreateMatchComponent,
+    LeagueNavbarComponent,
+    LeagueRankingComponent,
   ],
   imports: [
     BrowserModule,

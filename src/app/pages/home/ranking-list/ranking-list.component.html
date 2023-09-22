@@ -12,18 +12,17 @@
                   <li class="list-group-item pt-0" *ngFor="let client of clients">
                     <div class="d-flex align-items-center">
                       <div class="flex-shrink-0 me-3">
-                        <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" />
+                        <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
                       </div>
                       <div class="flex-grow-1">
-                        <h6 class="mb-0">{{ client.name }}</h6>
+                        <h6 class="mb-0" routerLink="/league" >{{ client.name }}</h6>
                         <!-- <p class="mb-0 text-muted">{{ client.location }}</p> -->
                       </div>
                       <div class="flex-shrink-0 position">
-                        <span class="mb-0 text-muted">
+                        <span class="mb-0 text-muted" routerLink="/league">
                             Pos.
                         </span>
-                        <p>{{ client.amount }}</p>
-                        
+                        <p routerLink="/league">{{ client.amount }}</p>                      
                       </div>
                     </div>
                   </li>

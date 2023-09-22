@@ -1,0 +1,45 @@
+<app-league-navbar></app-league-navbar>
+<div class="wrapper">
+    <div class="section">
+        <div class="container">
+            <button class="btn btn-primary mb-3" (click)="toggleDetailedStats()">Detailed Stats</button>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="text-left">Pos.</th>
+                  <th class="text-left">Name</th>
+                  <ng-container *ngIf="showDetailedStats">
+                    <th placement="bottom" ngbTooltip="Matches played" container="body">MP</th>
+                    <th placement="bottom" ngbTooltip="Reward Points" container="body">RP</th>
+                    <th placement="bottom" ngbTooltip="Bet Points" container="body">BP</th>
+                    <th placement="bottom" ngbTooltip="Special Event Points" container="body">SEP</th>
+                  </ng-container>
+                  <th class="text-right">Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let elemento of classifica" [ngClass]="{'highlight-row': highlightPlayer8 && elemento.posizione === 8}">
+                  <td class="align-middle">{{ elemento.posizione }}</td>
+                  <td class="align-middle">
+                    <div class="d-flex align-items-center">
+                      <div class="rounded-circle" style="width: 30px; height: 30px; background-color: #007bff; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold;">
+                        {{ elemento.name[0] }}
+                      </div>
+                      <div class="ml-2">
+                        {{ elemento.name }}
+                      </div>
+                    </div>
+                  </td>
+                  <ng-container *ngIf="showDetailedStats">
+                    <td class="align-middle">{{ elemento.mp }}</td>
+                    <td class="align-middle">{{ elemento.rp }}</td>
+                    <td class="align-middle">{{ elemento.bp }}</td>
+                    <td class="align-middle">{{ elemento.sep }}</td>
+                  </ng-container>
+                  <td class="text-right align-middle">{{ elemento.points }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+    </div>
+</div>

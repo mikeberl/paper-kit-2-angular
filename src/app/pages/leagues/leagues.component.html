@@ -19,14 +19,14 @@
                       <li class="league-list-group-item pt-0" *ngFor="let client of filteredClients">
                         <div class="d-flex align-items-center">
                           <div class="flex-shrink-0 me-3">
-                            <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" />
+                            <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
                           </div>
                           <div class="flex-grow-1">
-                            <h5 class="mb-0">{{ client.name }}</h5>
-                            <a> Host by: Roundnet Bolzano</a>
+                            <h5 class="mb-0" routerLink="/league">{{ client.name }}</h5>
+                            <a routerLink="/league"> Host by: Roundnet Bolzano</a>
                           </div>
                           <div class="flex-shrink-0 position">
-                            <span class="mb-0 text-muted">
+                            <span class="mb-0 text-muted" routerLink="/league">
                                 Players
                             </span>
                             <p>{{ client.amount }}</p>
