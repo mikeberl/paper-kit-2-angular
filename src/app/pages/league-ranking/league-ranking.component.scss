@@ -12,3 +12,14 @@ th {
     color: black; /* Imposta il colore del testo per l'evidenziazione */
     border: 2px solid black;
   }
+
+.rounded-circle {
+    width: 30px;
+    height: 30px; 
+    background-color: #007bff; 
+    color: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-weight: bold;
+}
