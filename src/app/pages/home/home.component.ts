@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavbarService } from 'app/services/navbar.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor() { }
+  constructor(private navbarService: NavbarService) { }
 
   ngOnInit(): void {
+    // Invia un segnale al componente di navigazione quando questo componente viene caricato
+    this.navbarService.selectMenuItem(1); // Esempio: seleziona l'elemento "Home" (indice 1)
     this.setMinHeight();
   }
+
 
   setMinHeight() {
     const container1 = document.querySelector('.container1') as HTMLElement;

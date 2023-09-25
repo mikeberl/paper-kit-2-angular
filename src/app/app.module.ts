@@ -27,6 +27,7 @@ import { MatchesContainerComponent } from './pages/matches-container/matches-con
 import { CreateMatchComponent } from './pages/create-match/create-match.component';
 import { LeagueNavbarComponent } from './shared/league-navbar/league-navbar.component';
 import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.co
     CreateMatchComponent,
     LeagueNavbarComponent,
     LeagueRankingComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,

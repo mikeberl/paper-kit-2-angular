@@ -17,6 +17,7 @@ import { MatchesComponent } from './pages/matches/matches.component';
 import { MatchesContainerComponent } from './pages/matches-container/matches-container.component';
 import { CreateMatchComponent } from './pages/create-match/create-match.component';
 import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 const routes: Routes =[
     // { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
@@ -32,8 +33,8 @@ const routes: Routes =[
     { path: 'leagues',    component: LeaguesComponent},
     { path: 'matches',    component: MatchesContainerComponent},
     { path: 'create-match', component: CreateMatchComponent},
-    { path: 'league', component: LeagueRankingComponent}
-
+    { path: 'league', component: LeagueRankingComponent}, 
+    { path: 'notifications', component: NotificationsComponent}
     
 ];
 
