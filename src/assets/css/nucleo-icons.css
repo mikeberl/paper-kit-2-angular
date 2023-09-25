@@ -31,6 +31,9 @@ License - nucleoapp.com/license/
   font-size: 1.33333333em;
   vertical-align: -16%;
 }
+.nc-icon.x1half {
+    font-size: 1.2em;
+}
 .nc-icon.x2 {
   font-size: 2em;
 }
