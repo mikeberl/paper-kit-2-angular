@@ -11,7 +11,13 @@
 .section-no-bottom-pad {
     padding-top: 70px;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: transparent;
+}
+
+.section-no-top-pad {
+    padding-bottom: 70px;
+    position: relative;
+    background-color: transparent;
 }
 
 .section-with-space{
