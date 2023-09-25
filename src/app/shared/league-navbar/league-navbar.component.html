@@ -1,0 +1,17 @@
+<div class="section-no-pad">
+    <nav class="navbar navbar-expand-lg fixed-top bg-violet">
+        <div class="container navbar-container">
+            <a class="navbar-btn">
+                <i class="nc-icon x2 nc-minimal-left" routerLink="/home"></i>
+                <a class="league-name">League name</a>
+            </a>
+            <button class="btn btn-round navbar-btn btn-danger" *ngIf="leagueToJoin">
+                Leave League
+            </button>
+            <button class="btn btn-round navbar-btn btn-success" *ngIf="!leagueToJoin">
+                Join League
+            </button>
+
+        </div>
+    </nav>
+</div>
