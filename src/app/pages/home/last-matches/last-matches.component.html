@@ -1,19 +1,26 @@
 <div class="section-no-pad">
     <div class="container">
         <div class="row">
-          <div class="col-xl-12 mb-3 mb-lg-5">
+          <div class="col-xl-12 mb-lg-5">
             <div class="card">
-                <div class="d-flex card-header justify-content-between bg-gradient">
+                <div class="d-flex card-header card-header-matches justify-content-between bg-gradient">
                     <h5 class="me-3 mb-0">Last matches</h5>
-                    <a style="color: black;" routerLink="/matches">View All</a>
-                  </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <div class="bar-container" *ngFor="let bar of bars">
-                        <div class="label green">+15</div>            
-                    </div>
-                </div>            
-              </div>
+                    <button class="view-all-btn bg-gradient-yellow btn-round" routerLink="/matches">View All</button>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                      <div class="" *ngFor="let bar of bars">
+                        <div class="bar-container" *ngIf="bar.label === '+15'">
+                          <div class="label green"> W</div>
+                          <span class="points-span"> + 15 </span> 
+                        </div>   
+                        <div class="bar-container" *ngIf="bar.label != '+15'">
+                          <div class="label red"> L</div>
+                          <span class="points-span"> - 15 </span> 
+                        </div>      
+                      </div>
+                  </div>            
+                </div>
             </div>
           </div>
         </div>

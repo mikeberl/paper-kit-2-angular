@@ -2549,7 +2549,7 @@ textarea.form-control {
 
 .card {
   border-radius: 12px;
-  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.3);
   background-color: #FFFFFF;
   color: #333333;
   margin-bottom: 20px;

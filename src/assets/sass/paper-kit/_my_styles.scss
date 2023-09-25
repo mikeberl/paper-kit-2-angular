@@ -6,6 +6,10 @@
     background-color: yellow;
 }
 
+.bg-transparent {
+    background-color: transparent;
+}
+
 .bg-white-smoke {
     background-color: whitesmoke;
 }
@@ -14,8 +18,13 @@
     background-color: white;
 }
 
-.bg-gradient {
-    background: linear-gradient(45deg, #9C27B0, #FFC107 );
+.bg-gradient-white-smoke {
+    background: linear-gradient(45deg, whitesmoke, white);
+    color: whitesmoke;
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(45deg, #ffa804, #fbc436);
     color: white;
 }
 

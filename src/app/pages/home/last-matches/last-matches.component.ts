@@ -10,7 +10,7 @@ export class LastMatchesComponent {
     { label: '+15' },
     { label: '+15' },
     { label: '+15' },
-    { label: '+15' },
+    { label: '-15' },
     { label: '+15' },
   ];
 }
