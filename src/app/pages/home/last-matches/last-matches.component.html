@@ -9,7 +9,23 @@
                 </div>
                 <div class="card-body">
                   <div class="d-flex justify-content-between">
-                      <div class="" *ngFor="let bar of bars">
+                    <div class="" *ngFor="let match of matches; let i = index">
+                      <div class="bar-container">
+                        <ng-container *ngIf="match.label === '+15'">
+                          <div class="label green"> W</div>
+                          <span class="points-span"> + 15 </span> 
+                        </ng-container>
+                        <ng-container *ngIf="match.label === '-15'">
+                          <div class="label red"> L</div>
+                          <span class="points-span"> - 15 </span> 
+                        </ng-container>
+                        <ng-container *ngIf="match.label !== '+15' && match.label !== '-15'">
+                          <div class="label grey"> # </div>
+                          <span class="points-span"> -/+ </span> 
+                        </ng-container>
+                      </div>   
+                    </div>
+                      <!-- <div class="" *ngFor="let bar of bars">
                         <div class="bar-container" *ngIf="bar.label === '+15'">
                           <div class="label green"> W</div>
                           <span class="points-span"> + 15 </span> 
@@ -18,7 +34,7 @@
                           <div class="label red"> L</div>
                           <span class="points-span"> - 15 </span> 
                         </div>      
-                      </div>
+                      </div> -->
                   </div>            
                 </div>
             </div>
