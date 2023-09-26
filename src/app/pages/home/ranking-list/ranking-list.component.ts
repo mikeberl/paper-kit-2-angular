@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ranking-list.component.scss']
 })
 export class RankingListComponent {
-  clients = [
+  leagues = [
     {
       name: 'Inara Britt',
       location: 'Georgia, USA',

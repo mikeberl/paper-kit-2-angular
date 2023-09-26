@@ -8,28 +8,38 @@
                 <button class="p-btn btn-round p-btn soft-down-shadow-b" routerLink="/leagues">View All</button>
             </div>
               <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item pt-0" *ngFor="let client of clients">
-                    <div class="d-flex align-items-center">
-                      <div class="flex-shrink-0 me-3">
-                        <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
+                <ng-container *ngIf="leagues.length > 0; else emptyList">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item pt-0" *ngFor="let league of leagues">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                          <img [src]="league.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h6 class="mb-0" routerLink="/league" >{{ league.name }}</h6>
+                          <!-- <p class="mb-0 text-muted">{{ client.location }}</p> -->
+                        </div>
+                        <div class="flex-shrink-0 position">
+                          <span class="mb-0 text-muted" routerLink="/league">
+                              Pos.
+                          </span>
+                          <p routerLink="/league">{{ league.amount }}</p>                      
+                        </div>
                       </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-0" routerLink="/league" >{{ client.name }}</h6>
-                        <!-- <p class="mb-0 text-muted">{{ client.location }}</p> -->
-                      </div>
-                      <div class="flex-shrink-0 position">
-                        <span class="mb-0 text-muted" routerLink="/league">
-                            Pos.
-                        </span>
-                        <p routerLink="/league">{{ client.amount }}</p>                      
-                      </div>
-                    </div>
-                  </li>
-                </ul>            
+                    </li>
+                  </ul>
+                </ng-container>
+                <ng-template #emptyList>
+                  <p>You haven't joined any league yet</p>
+                  <button class="btn s-btn" routerLink="/leagues">
+                    <i class="fa fa-search"></i>
+                    Search League
+                  </button>
+                </ng-template>
+            </div>            
               </div>
             </div>
           </div>
         </div>
     </div>    
-</div>
+
