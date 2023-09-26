@@ -3,14 +3,7 @@
     max-height: 100vh;
 }
 
-.bg-violet {
-    background-color: rgb(188, 94, 188);
-}
-
-.bg-yellow {
-    background-color: yellow;
-}
-
+//backgorunds
 .bg-transparent {
     background-color: transparent;
 }
@@ -33,20 +26,27 @@
     color: white;
 }
 
-.gradient-button {
-    background: linear-gradient(45deg, #FFC107, #9C27B0); /* Definizione del gradiente */
-    color: white; /* Colore del testo */
-    // padding: 10px 20px; /* Spaziatura interna */
-    border: none; /* Rimuovi il bordo */
-    // cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    // border-radius: 5px; /* Bordo arrotondato */
-    font-weight: bold; /* Grassetto */
-  }
 
+// alignment
 .fixed-bottom {
     position:fixed;
     bottom:0;
     right:0;
     left:0;
     z-index:1030;
+}
+
+//shadows
+.soft-down-shadow-b {
+    box-shadow: 1px 7px 15px rgba(0, 0, 0, 0.3);
+}
+.hard-down-shadow-b {
+    box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.6);
+}
+
+// buttons 
+.s-btn {
+    background: linear-gradient(45deg, #3C404C, #30323a);
+    color: white;
+    border: none;
 }
