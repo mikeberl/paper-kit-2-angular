@@ -1,9 +1,8 @@
-.app-container {
-    min-height: 100vh;
-    max-height: 100vh;
-}
 
+
+///////////////////////////////////////////////////////////////
 //backgorunds
+///////////////////////////////////////////////////////////////
 .bg-transparent {
     background-color: transparent;
 }
@@ -26,8 +25,15 @@
     color: white;
 }
 
-
+///////////////////////////////////////////////////////////////
 // alignment
+///////////////////////////////////////////////////////////////
+
+.app-container {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
 .fixed-bottom {
     position:fixed;
     bottom:0;
@@ -36,17 +42,50 @@
     z-index:1030;
 }
 
+
+///////////////////////////////////////////////////////////////
 //shadows
+///////////////////////////////////////////////////////////////
 .soft-down-shadow-b {
-    box-shadow: 1px 7px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 7px 15px rgba(0, 0, 0, 0.2);
 }
 .hard-down-shadow-b {
     box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.6);
 }
 
-// buttons 
+///////////////////////////////////////////////////////////////
+// BUTTONS //
+///////////////////////////////////////////////////////////////
+
+//primary
+
+.card-header {
+    .p-btn {
+        padding: 5px 15px;
+        font-weight: 500;
+        font-size: small;
+    }
+}
+
+.p-btn {
+    background: linear-gradient(45deg, #ffa804, #fbc436);
+    color: white;
+    border: none;
+}
+
 .s-btn {
     background: linear-gradient(45deg, #3C404C, #30323a);
     color: white;
     border: none;
+}
+
+
+///////////////////////////////////////////////////////////////
+//elements
+///////////////////////////////////////////////////////////////
+
+.card-header {
+    border-top-left-radius: 24px !important; /* Arrotonda il bordo in alto a sinistra */
+    border-top-right-radius: 24px !important;
+    align-items: center;
 }
