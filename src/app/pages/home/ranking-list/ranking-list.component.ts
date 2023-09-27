@@ -7,18 +7,17 @@ import { Component } from '@angular/core';
 })
 export class RankingListComponent {
   leagues = [
-    {
-      name: 'Inara Britt',
-      location: 'Georgia, USA',
-      imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-      amount: '13 / 30'
-    },
-    {
-      name: 'Inara Britt',
-      location: 'Georgia, USA',
-      imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-      amount: '1 / 2'
-    },
-    // Aggiungi gli altri oggetti cliente qui...
+    // {
+    //   name: 'Inara Britt',
+    //   location: 'Georgia, USA',
+    //   imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+    //   amount: '13 / 30'
+    // },
+    // {
+    //   name: 'Inara Britt',
+    //   location: 'Georgia, USA',
+    //   imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+    //   amount: '1 / 2'
+    // },
   ];
 }

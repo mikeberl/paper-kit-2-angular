@@ -12,10 +12,10 @@ export class MainNavbarComponent {
 
   constructor(private navbarService: NavbarService) {
     this.menuItems = [
-      { title: 'Play', scss: 'nc-user-run', link: '/create-match', selected: false },
-      { title: 'Home', scss: 'nc-single-02',link: '/home', selected: false },
-      { title: 'Updates', scss: 'nc-time-alarm',link: '/notifications', selected: false },
-      { title: 'Settings', scss: 'nc-settings-gear-65',link: '/settings', selected: false }
+      { title: 'Play', scss: 'nc-icon nc-user-run', link: '/create-match', selected: false },
+      { title: 'Home', scss: 'nc-icon nc-single-02',link: '/home', selected: false },
+      { title: 'Updates', scss: 'nc-icon nc-time-alarm',link: '/notifications', selected: false },
+      { title: 'Settings', scss: 'nc-icon nc-settings-gear-65',link: '/settings', selected: false }
     ];
   }
 

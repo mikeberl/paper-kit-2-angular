@@ -17,7 +17,6 @@
 
 .bg-gradient-white-smoke {
     background: linear-gradient(45deg, whitesmoke, white);
-    color: whitesmoke;
 }
 
 .bg-gradient-yellow {
@@ -59,14 +58,6 @@
 
 //primary
 
-.card-header {
-    .p-btn {
-        padding: 5px 15px;
-        font-weight: 500;
-        font-size: small;
-    }
-}
-
 .p-btn {
     background: linear-gradient(45deg, #ffa804, #fbc436);
     color: white;
@@ -83,9 +74,18 @@
 ///////////////////////////////////////////////////////////////
 //elements
 ///////////////////////////////////////////////////////////////
+.card {
 
-.card-header {
-    border-top-left-radius: 24px !important; /* Arrotonda il bordo in alto a sinistra */
-    border-top-right-radius: 24px !important;
-    align-items: center;
+    .card-header {
+        border-top-left-radius: 24px !important; /* Arrotonda il bordo in alto a sinistra */
+        border-top-right-radius: 24px !important;
+        align-items: center;
+    
+        .p-btn {
+            padding: 5px 15px;
+            font-weight: 500;
+            font-size: small;
+        }
+    }
+
 }

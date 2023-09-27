@@ -10,6 +10,8 @@ git status -> cosa é cambiato
 
 git add *  (oppure) git add nome_del_file -> per aggiungere file a git
 
+git checkout _nome_del_branch_ per cambiare branch
+
 
 # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://demos.creative-tim.com/paper-kit-2-angular/)
 

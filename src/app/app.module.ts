@@ -28,6 +28,7 @@ import { CreateMatchComponent } from './pages/create-match/create-match.componen
 import { LeagueNavbarComponent } from './shared/league-navbar/league-navbar.component';
 import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { NotificationsComponent } from './pages/notifications/notifications.comp
     AppRoutingModule,
     HttpClientModule,
     CommonModule, 
+    FontAwesomeModule
   ],
   providers: [
     {

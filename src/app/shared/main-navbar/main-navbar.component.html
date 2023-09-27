@@ -6,8 +6,8 @@
                [ngClass]="{'btn-selected': item.selected, 'btn-unselected': !item.selected}"
                (click)="onItemClick(index)"
                *ngFor="let item of menuItems; let index = index">
-              <i [ngClass]="item.scss" class="nc-icon x1half nav-icon"></i>
-              {{ item.title }}
+              <i [ngClass]="item.scss" class="nc-icon x2 nav-icon"></i>
+              <!-- {{ item.title }} -->
             </a>
         </div>
     </nav>
