@@ -12,6 +12,8 @@ git add *  (oppure) git add nome_del_file -> per aggiungere file a git
 
 git checkout _nome_del_branch_ per cambiare branch
 
+git stash -> ritorna all'ultimo commit (save)
+
 
 # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://demos.creative-tim.com/paper-kit-2-angular/)
 
