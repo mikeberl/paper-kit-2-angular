@@ -1,25 +1,28 @@
-<app-main-navbar></app-main-navbar>
-<div class="wrapper">
-    <div class="section">
+
+<div class="wrapper app-container">
+    <div class="section-no-pad">
         <div class="container">
+            <div class="row logo-row">
+                <img src="./assets/img/logo.png" class=" img-no-padding img-responsive img-logo">
+            </div>
             <div class="row settings-btn-row first-btn-row">
-                <button type="button" class="btn btn-info btn-round settings-btn">Languages</button>
+                <button type="button" class="btn p-btn btn-round settings-btn">Languages</button>
             </div>
             <div class="row settings-btn-row">
-                <button type="button" class="btn btn-info btn-round settings-btn">Dark Mode</button>
+                <button type="button" class="btn p-btn btn-round settings-btn">Dark Mode</button>
             </div>
             <div class="row settings-btn-row">
-                <button type="button" class="btn btn-info btn-round settings-btn">Create a League</button>
+                <button type="button" class="btn p-btn btn-round settings-btn">Create a League</button>
             </div>
             <div class="row settings-btn-row">
-                <button type="button" class="btn btn-info btn-round settings-btn">Report a Bug</button>
+                <button type="button" class="btn p-btn btn-round settings-btn">Report a Bug</button>
             </div>
             <div class="row settings-btn-row">
-                <button type="button" class="btn btn-info btn-round settings-btn">FAQ</button>
+                <button type="button" class="btn p-btn btn-round settings-btn">FAQ</button>
             </div>
         </div>
     </div> 
-    <div class="section-no-pad section-footer">
+    <div class="section-no-pad section-logout">
         <div class="container">
             <div class="row settings-btn-row footer-row">
                 <button type="button" class="btn btn-danger btn-round settings-btn" (click)="logout()">Logout</button>
@@ -27,4 +30,7 @@
         </div>
     </div>   
 </div>
-<app-footer></app-footer>
+<div class="navbar-div">
+    <app-main-navbar></app-main-navbar>
+</div>
+<!-- <app-footer></app-footer> -->
