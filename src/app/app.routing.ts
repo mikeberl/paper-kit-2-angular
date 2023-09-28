@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './components/components.component';
 import { ProfileComponent } from './examples/profile/profile.component';
-import { SignupComponent } from './examples/signup/signup.component';
 import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -18,6 +17,7 @@ import { MatchesContainerComponent } from './pages/matches-container/matches-con
 import { CreateMatchComponent } from './pages/create-match/create-match.component';
 import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes =[
     // { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
