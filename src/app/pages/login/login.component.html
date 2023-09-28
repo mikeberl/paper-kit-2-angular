@@ -1,6 +1,17 @@
 <div class="wrapper">
     <div class="page-header bg-gradient-yellow">
       <div class="container">
+        <ngb-alert *ngIf="showAlert" [type]="alertType" [dismissible]="false">
+          <div class="container">
+            <ng-container>
+              <i class="nc-icon nc-bell-55"></i>
+            </ng-container>
+            {{ alertMessage }}
+            <button type="button" name="button" class="close" (click)="closeAlert()">
+              <i class="nc-icon nc-simple-remove"></i>
+            </button>
+          </div>
+        </ngb-alert>
         <div class="row login-row">
           <div class="card card-register hard-down-shadow-b">
             <h3 class="title">Log In Settings</h3>
@@ -8,17 +19,20 @@
             <form class="register-form">
               <label>Username</label>
               <div class="input-group" [ngClass]="{'input-group-focus': focus === true}">
-                <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" (focus)="focus = true" (blur)="focus = false">
+                <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" 
+                       (focus)="onFocus('username')" (blur)="onBlur('username')" [placeholder]="'Username'">
               </div>
-
+              <div *ngIf="errors.username" class="error-message">This field cannot be empty</div>
               <label>Password</label>
               <div class="input-group " [ngClass]="{'input-group-focus': focus1 === true}">
-                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" (focus)="focus1 = true" (blur)="focus1 = false">
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" 
+                      (focus)="onFocus('password')" (blur)="onBlur('password')" [placeholder]="'Password'"> 
               </div>
+              <div *ngIf="errors.password" class="error-message">This field cannot be empty</div>
               <button type="button" class="btn p-btn btn-block btn-round btn-login" (click)="login()">Login</button>
             </form>
             <div class="forgot2">
-              <a class="btn-forgot-password">Forgot password?</a>
+              <a class="btn-forgot-password" routerLink="/home">Forgot password?</a>
             </div>
             <div class="forgot">
               <!-- <p class="text-7">Don't have an account?</p> -->

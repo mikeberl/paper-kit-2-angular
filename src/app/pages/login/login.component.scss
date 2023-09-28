@@ -26,3 +26,13 @@
     display: flex;
     flex-direction: column;
 }
+
+// .has-error {
+//     border: 1px solid red; /* Cambia il colore del bordo in rosso */
+// }
+  
+.error-message {
+    color: red; /* Imposta il colore del testo dell'errore in rosso */
+    margin-top: 5px; /* Aggiungi uno spazio tra il campo input e il messaggio di errore */
+}
+  

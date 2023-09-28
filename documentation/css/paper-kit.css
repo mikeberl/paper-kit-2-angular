@@ -2562,13 +2562,13 @@ textarea.form-control {
   -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
 }
-.card:not(.card-plain):hover {
+/* .card:not(.card-plain):hover {
   box-shadow: 0px 12px 19px -7px rgba(0, 0, 0, 0.3);
   transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
-}
+} */
 .card.card-plain {
   background-color: transparent;
   box-shadow: none;
@@ -2649,6 +2649,7 @@ textarea.form-control {
   background-color: #FF8F5E;
   border-radius: 8px;
   color: #fff;
+  min-width: 60vw;
   max-width: 350px;
   margin: 120px 0 70px;
   min-height: 400px;
