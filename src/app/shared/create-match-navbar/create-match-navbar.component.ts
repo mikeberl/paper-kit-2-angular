@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CreateMatchNavbarComponent {
 
-  options: string[] = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+  options: string[] = ['Roundnet Bolzano', 'Roundnet Milano', 'Roundnet Bologna'];
   selectedOption: string = this.options[0];
 
   // Funzione per gestire il clic su un'opzione

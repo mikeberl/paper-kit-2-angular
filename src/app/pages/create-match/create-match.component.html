@@ -1,2 +1,43 @@
 <app-create-match-navbar></app-create-match-navbar>
-<p>create-match works!</p>
+<div class="wrapper">
+    <div class="section-leagues">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 search-col">
+                    <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                        <input type="text" class="form-control" placeholder="Search Player" aria-describedby="basic-addon1"
+                                [(ngModel)]="searchText" (input)="filterPlayers()" (focus)="focus=true" (blur)="focus=false" />
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-xl-12 mb-3 mb-lg-5">
+                <div class="card">
+                  <div class="">
+                    <ul class="list-group list-group-flush">
+                      <li class="league-list-group-item pt-0" *ngFor="let player of filteredPlayers">
+                        <div class="d-flex align-items-center">
+                          <div class="flex-shrink-0 me-3">
+                            <img [src]="player.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
+                          </div>
+                          <div class="flex-grow-1">
+                            <h5 class="mb-0" routerLink="/league">{{ player.name }}</h5>
+                          </div>
+                          <div class="buttons-wl position">
+                            <!-- <span class="mb-0 text-muted" routerLink="/league">
+                                Players
+                            </span> -->
+                            <button class="btn btn-round btn-icon bg-success btn-pick"> <i class="fa fa-arrow-up" aria-hidden="true"> </i></button>
+                            <button class="btn btn-round btn-icon bg-danger btn-pick"> <i class="fa fa-arrow-down" aria-hidden="true"> </i></button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>            
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>    
+    </div>      
+</div>
