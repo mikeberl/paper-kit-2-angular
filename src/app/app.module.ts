@@ -30,6 +30,7 @@ import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.co
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SignupComponent } from './pages/signup/signup.component';
+import { CreateMatchNavbarComponent } from './shared/create-match-navbar/create-match-navbar.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     LeagueRankingComponent,
     NotificationsComponent,
     SignupComponent,
+    CreateMatchNavbarComponent,
   ],
   imports: [
     BrowserModule,

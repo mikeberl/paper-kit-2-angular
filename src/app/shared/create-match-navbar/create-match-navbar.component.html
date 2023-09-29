@@ -1,0 +1,40 @@
+<!-- <div class="section-no-pad">
+    <nav class="navbar nav-create bg-gradient-yellow fixed-top">
+        <a class="navbar-brand" routerLink="/home">
+            <i class="nc-icon x2 nc-minimal-left"></i>            
+        </a>
+        
+        <div ngbDropdown class="d-inline-block dropdown">
+            <a class="nav-link navbar-brand" id="dropdownBasic1" ngbDropdownToggle>Dropdown</a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+                <a class="dropdown-item">Action - 1</a>
+                <a class="dropdown-item">Another Action</a>
+                <a class="dropdown-item">Something else is here</a>
+            </div>
+        </div>
+    </nav>
+</div> -->
+
+<div class="section-no-pad">
+    <nav class="navbar nav-create bg-gradient-yellow fixed-top">
+      <a class="navbar-brand" routerLink="/home">
+        <i class="nc-icon x2 nc-minimal-left"></i>            
+      </a>
+      
+      <div ngbDropdown class="d-inline-block dropdown">
+        <!-- Utilizza *ngIf per controllare la lunghezza della lista -->
+        <a *ngIf="options.length >= 2" class="nav-link navbar-brand" id="dropdownBasic1" ngbDropdownToggle>{{ selectedOption }}</a>
+        <a *ngIf="options.length === 1" class="nav-link navbar-brand">{{ selectedOption }}</a>
+        
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+          <!-- Utilizza *ngFor con le opzioni filtrate -->
+          <a class="dropdown-item" *ngFor="let option of getFilteredOptions()" (click)="onSelectOption(option)">
+            {{ option }}
+          </a>
+        </div>
+      </div>
+    </nav>
+</div>
+  
+  
+  
