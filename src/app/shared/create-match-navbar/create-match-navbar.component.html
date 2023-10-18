@@ -26,7 +26,7 @@
         <a *ngIf="options.length >= 2" class="nav-link navbar-brand" id="dropdownBasic1" ngbDropdownToggle>{{ selectedOption }}</a>
         <a *ngIf="options.length === 1" class="nav-link navbar-brand">{{ selectedOption }}</a>
         
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary cm-dropdown">
           <!-- Utilizza *ngFor con le opzioni filtrate -->
           <a class="dropdown-item" *ngFor="let option of getFilteredOptions()" (click)="onSelectOption(option)">
             {{ option }}
