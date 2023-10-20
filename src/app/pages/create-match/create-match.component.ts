@@ -70,14 +70,6 @@ export class CreateMatchComponent {
 
   selectedPoints: number = 0;
 
-  // Altre dichiarazioni e metodi del tuo componente
-  // ...
-
-  // Metodo per gestire il cambio del valore dello slider
-  
-
-  
-
   constructor() {
     this.filteredPlayers = this.players;
   }

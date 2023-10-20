@@ -1,103 +1,96 @@
-.avatar {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: .765625rem;
-    margin: 5px;
-}
-a {
-text-decoration:none;    
+// page and rows general layout
+.section-main-content {
+    padding: 85px 0px 0px;
+    position: relative;
+    background-color: #fff;
+
+    .row {
+        justify-content: center;
+
+        .row-content {
+            margin-bottom: 10px;
+            width: 95vw;
+        }
+    }
 }
 
-.section-footer {
-    padding-top: 70px;
-}
-
-.position {
-    text-align: end;
-}
-
+// list of player section
 .card-players {
     max-height: 50vh;
     min-height: 50vh;
     overflow-y: auto;
+
+    .league-list-group-item {
+        position: relative;
+        display: block;
+        padding: .25rem 0.25rem;
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.125);
+
+        .avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: .765625rem;
+            margin: 5px;
+        }
+    
+        .up-down-container {
+            display: flex;
+            flex-direction: row;
+            text-align: end;
+
+            .btn {
+                border: none;
+                margin: 0 3px;
+            }
+        } 
+    }
 }
 
-.section-leagues {
-    padding: 85px 0px 0px;
-    position: relative;
-    background-color: #fff;
-}
-
-.colx-1 {
-    margin-bottom: 10px;
-    width: 95vw;
-}
-
-.league-list-group-item {
-    position: relative;
-    display: block;
-    padding: .25rem 0.25rem;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
-}
-
-.buttons-wl {
-    display: flex;
-    flex-direction: row;
-}
-
-.btn-pick {
-    border: none;
-    margin: 0 3px;
-}
-
-.player-list-row {
-    justify-content: center;
-}
-
-
-.label-container {
+// winners and losers section
+.player-chip-container {
     margin: 10px;
     display: flex;
-    flex-wrap: wrap; /* Consente di andare a capo quando non c'è più spazio orizzontale */
+    flex-wrap: wrap;
     max-width: 90%;
-  }
-  
-  .label {
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin: 5px 3px;
-    font-weight: bold;
-    font-size: small;
-    display: flex;
-    align-items: center;
-  }
-  
-  .label-green {
-    background-color: green;
-    color: white;
-  }
-  
-  .label-red {
-    background-color: red;
-    color: white;
-  }
 
-  .name {
-    margin-right: 2px;
-  }
+    .player-chip {
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin: 5px 3px;
+        font-weight: bold;
+        font-size: small;
+        display: flex;
+        align-items: center;
+    }
+      
+    .winner-chip {
+        background-color: green;
+        color: white;
+    }
+    
+    .loser-chip {
+        background-color: red;
+        color: white;
+    }
 
-  .btn-transparent {
-    background-color: transparent;
-    border: none;
-    // padding: 0px !important;
-  }
-
-  .button-container {
+    .name {
+        margin-right: 2px;
+    }
+    
+    .btn-remove {
+        background-color: transparent;
+        border: none;
+    }
+}
+  
+// end and new match btn section
+.button-container {
     display: flex;
     justify-content: space-around;
-  }
 
-  .half-width {
-    width: 45%;
-  }
+    .btn-width {
+        width: 45%;
+    }
+}
+

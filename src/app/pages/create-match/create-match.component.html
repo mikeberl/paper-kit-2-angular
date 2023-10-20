@@ -1,97 +1,96 @@
-
 <div class="wrapper app-container">
   <app-create-match-navbar></app-create-match-navbar>
-  <div class="section-leagues">
-      <div class="container">
-          <div class="row player-list-row">
-            <div class="colx-1">
-                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
-                    <input type="text" class="form-control" placeholder="Search Player" aria-describedby="basic-addon1"
-                            [(ngModel)]="searchText" (input)="filterPlayers()" (focus)="focus=true" (blur)="focus=false" />
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+  <div class="section-main-content">
+    <div class="container">
+      <!-- search bar and list row-->
+      <div class="row">
+        <!-- search bar -->
+        <div class="row-content">
+          <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+            <input type="text" class="form-control" placeholder="Search Player" aria-describedby="basic-addon1"
+              [(ngModel)]="searchText" (input)="filterPlayers()" (focus)="focus=true" (blur)="focus=false" />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- list of players-->
+        <div class="row-content">
+          <div class="card card-players">
+            <div class="">
+              <ul class="list-group list-group-flush">
+                <li class="league-list-group-item" *ngFor="let player of filteredPlayers">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0 me-3">
+                      <img [src]="player.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league" />
                     </div>
-                </div>
-            </div>
-            <div class="colx-1">
-              <div class="card card-players">
-                <div class="">
-                  <ul class="list-group list-group-flush">
-                    <li class="league-list-group-item" *ngFor="let player of filteredPlayers">
-                      <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 me-3">
-                          <img [src]="player.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
-                        </div>
-                        <div class="flex-grow-1">
-                          <h5 class="mb-0">{{ player.name }}</h5>
-                        </div>
-                        <div class="buttons-wl position">
-                          <button class="btn btn-round btn-icon bg-success btn-pick" (click)="addToWinners(player)">
-                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
-                          </button>
-                          <button class="btn btn-round btn-icon bg-danger btn-pick" (click)="addToLosers(player)">
-                            <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>            
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row player-list-row">
-            <div class="colx-1">
-              <div class="card">
-                <h3>winners</h3>
-                <div class="label-container">
-                  <div class="label-item label label-green" *ngFor="let winner of winners; let i = index">
-                    <span class="name">{{ winner.name }}</span>
-                    <button class="btn-transparent btn" (click)="removeLabel(winners, i)">X</button>
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0">{{ player.name }}</h5>
+                    </div>
+                    <div class="up-down-container">
+                      <button class="btn btn-round btn-icon bg-success" (click)="addToWinners(player)">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                      </button>
+                      <button class="btn btn-round btn-icon bg-danger" (click)="addToLosers(player)">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </button>
+                    </div>
                   </div>
-                </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- winners row -->
+      <div class="row">
+        <div class="row-content">
+          <div class="card">
+            <h3>winners</h3>
+            <div class="player-chip-container">
+              <div class="player-chip winner-chip" *ngFor="let winner of winners; let i = index">
+                <span class="name">{{ winner.name }}</span>
+                <button class="btn-remove btn" (click)="removeLabel(winners, i)">X</button>
               </div>
             </div>
           </div>
-          
-          <div class="row player-list-row">
-            <div class="colx-1">
-              <div class="card">
-                <h3>losers</h3>
-                <div class="label-container">
-                  <div class="label-item label label-red" *ngFor="let loser of losers; let i = index">
-                    <span class="name">{{ loser.name }}</span>
-                    <button class="btn-transparent btn" (click)="removeLabel(losers, i)">X</button>
-                  </div>
-                </div>
+        </div>
+      </div>
+      <!-- losers row -->
+      <div class="row">
+        <div class="row-content">
+          <div class="card">
+            <h3>losers</h3>
+            <div class="player-chip-container">
+              <div class="player-chip loser-chip" *ngFor="let loser of losers; let i = index">
+                <span class="name">{{ loser.name }}</span>
+                <button class="btn-remove btn" (click)="removeLabel(losers, i)">X</button>
               </div>
             </div>
           </div>
-
-          <div class="row player-list-row">
-            <!-- New "winning team points" card -->
-            <div class="colx-1">
-              <div class="card">
-                <h3>Winning Team Points</h3>
-                <div class="slider-container">
-                  <input type="range" min="0" max="30" step="5" [(ngModel)]="selectedPoints">
-                  <span class="slider-value">{{ selectedPoints }}</span>
-                </div>
-              </div>
+        </div>
+      </div>
+      <!-- points slider row -->
+      <div class="row">
+        <div class="row-content">
+          <div class="card">
+            <h3>Winning Team Points</h3>
+            <div class="slider-container">
+              <input type="range" min="0" max="30" step="5" [(ngModel)]="selectedPoints">
+              <span class="slider-value">{{ selectedPoints }}</span>
             </div>
           </div>
-
-          <div class="row player-list-row">
-            <!-- New row with buttons -->
-            <div class="colx-1">
-              <div class="button-container">
-                <button class="btn btn-primary half-width">New Match</button>
-                <button class="btn btn-danger half-width">End</button>
-              </div>
-            </div>
+        </div>
+      </div>
+      <!-- end and new match btn row-->
+      <div class="row">
+        <div class="row-content">
+          <div class="button-container">
+            <button class="btn btn-primary btn-width">New Match</button>
+            <button class="btn btn-danger btn-width">End</button>
           </div>
-          
-          
-      </div>    
-  </div>      
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
