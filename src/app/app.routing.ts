@@ -18,6 +18,7 @@ import { CreateMatchComponent } from './pages/create-match/create-match.componen
 import { LeagueRankingComponent } from './pages/league-ranking/league-ranking.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { MatchSubmissionPreviewComponent } from './pages/match-submission-preview/match-submission-preview.component';
 
 const routes: Routes =[
     // { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
@@ -34,7 +35,8 @@ const routes: Routes =[
     { path: 'matches',    component: MatchesContainerComponent},
     { path: 'create-match', component: CreateMatchComponent},
     { path: 'league', component: LeagueRankingComponent}, 
-    { path: 'notifications', component: NotificationsComponent}
+    { path: 'notifications', component: NotificationsComponent},
+    { path: 'match-submission-preview', component: MatchSubmissionPreviewComponent}
     
 ];
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-match',
@@ -8,7 +9,6 @@ import { Component } from '@angular/core';
 export class CreateMatchComponent {
 
   focus: any;
-
   players = [
     {
       id : 1,
@@ -70,32 +70,40 @@ export class CreateMatchComponent {
 
   selectedPoints: number = 0;
 
-  constructor() {
+  matches: any[] = [];
+
+
+  constructor(private router: Router) {
     this.filteredPlayers = this.players;
   }
 
+  // slider handler
   onSliderChange(event: any) {
     this.selectedPoints = event.target.value;
   }
 
-  removeLabel(array: any, index: number): void {
-    const player = array.splice(index, 1);
-    this.filteredPlayers.push(player[0]);
-    this.filteredPlayers.sort((a, b) => a.id - b.id);
-  }
-
+  // add to the winner list and removed from filteredPlayers
   addToWinners(player: any): void {
     this.winners.push(player);
     const index = this.filteredPlayers.findIndex((x) => x.name === player.name);
     this.filteredPlayers.splice(index, 1);
   }
 
+   // add to the loser list and removed from filteredPlayers
   addToLosers(player : any): void {
     this.losers.push(player);
     const index = this.filteredPlayers.findIndex((x) => x.name === player.name);
     this.filteredPlayers.splice(index, 1);
   }
 
+  // player removed from team and added to filteredPlayers
+  removePlayerFromTeam(array: any, index: number): void {
+    const player = array.splice(index, 1);
+    this.filteredPlayers.push(player[0]);
+    this.filteredPlayers.sort((a, b) => a.id - b.id);
+  }
+
+  // used in search function
   filterPlayers() {
     if (this.searchText) {
       this.filteredPlayers = this.players.filter(players =>
@@ -105,5 +113,55 @@ export class CreateMatchComponent {
       this.filteredPlayers = this.players;
     }
   }
+  
+  checkTheInputs() {
+    return true;
+  }
 
+  backToStart() {
+    this.winners = [];
+    this.losers = [];
+    this.selectedPoints = 0;
+    this.filteredPlayers = this.players;
+    this.searchText = '';
+    return;
+  }
+
+  newMatch() {
+    if (this.checkTheInputs()) {
+      this.matches.push( {
+        winners : this.winners,
+        losers: this.losers,
+        winpoints : this.selectedPoints,
+        losepoints: 0 - (this.selectedPoints * (this.winners.length / this.losers.length))
+      })
+      this.backToStart();
+      console.log(this.matches);
+      return;
+
+    }
+  }
+
+  goToPreview() {
+    if (this.checkTheInputs()) {
+      this.matches.push( {
+        winners : this.winners,
+        losers: this.losers,
+        winpoints : this.selectedPoints,
+        losepoints: 0 - (this.selectedPoints * (this.winners.length / this.losers.length))
+      })
+      console.log(this.matches);
+      this.router.navigate(['/match-submission-preview']);
+    }
+    else if (this.matches.length > 0) {
+      this.showInvalidMatchEndPopUp();
+    }
+    else {
+      return;
+    }
+  }
+
+  showInvalidMatchEndPopUp() {
+    throw new Error('Method not implemented.');
+  }
 }

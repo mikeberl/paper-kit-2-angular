@@ -50,7 +50,7 @@
             <div class="player-chip-container">
               <div class="player-chip winner-chip" *ngFor="let winner of winners; let i = index">
                 <span class="name">{{ winner.name }}</span>
-                <button class="btn-remove btn" (click)="removeLabel(winners, i)">X</button>
+                <button class="btn-remove btn" (click)="removePlayerFromTeam(winners, i)">X</button>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@
             <div class="player-chip-container">
               <div class="player-chip loser-chip" *ngFor="let loser of losers; let i = index">
                 <span class="name">{{ loser.name }}</span>
-                <button class="btn-remove btn" (click)="removeLabel(losers, i)">X</button>
+                <button class="btn-remove btn" (click)="removePlayerFromTeam(losers, i)">X</button>
               </div>
             </div>
           </div>
@@ -86,11 +86,13 @@
       <div class="row">
         <div class="row-content">
           <div class="button-container">
-            <button class="btn btn-primary btn-width">New Match</button>
-            <button class="btn btn-danger btn-width">End</button>
+            <button class="btn btn-primary btn-width" (click)="newMatch()">New Match</button>
+            <button class="btn btn-danger btn-width" (click)="goToPreview()">End</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
