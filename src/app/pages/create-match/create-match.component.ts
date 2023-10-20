@@ -11,42 +11,52 @@ export class CreateMatchComponent {
 
   players = [
     {
+      id : 1,
       name: 'Winter 11',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 2,
       name: '234 League',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 3,
       name: 'xxague',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 4,
       name: 'Sumgue',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 5,
       name: 'Winnererf dsfsdfsd',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 6,
       name: 'Suxccc',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 7,
       name: 'Win',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 8,
       name: 'Suague',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 9,
       name: 'Winter League',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
     {
+      id : 10,
       name: 'Summerague',
       imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
     },
@@ -55,8 +65,8 @@ export class CreateMatchComponent {
   searchText: string = '';
   filteredPlayers: any[] = [];
 
-  winners: string[] = [];
-  losers: string[] = [];
+  winners: any[] = [];
+  losers: any[] = [];
 
   
 
@@ -64,17 +74,22 @@ export class CreateMatchComponent {
     this.filteredPlayers = this.players;
   }
 
-  removeLabel(array: string[], index: number): void {
-    array.splice(index, 1);
+  removeLabel(array: any, index: number): void {
+    const player = array.splice(index, 1);
+    this.filteredPlayers.push(player[0]);
+    this.filteredPlayers.sort((a, b) => a.id - b.id);
   }
 
-  addToWinners(playerName: string): void {
-    this.winners.push(playerName);
+  addToWinners(player: any): void {
+    this.winners.push(player);
+    const index = this.filteredPlayers.findIndex((x) => x.name === player.name);
+    this.filteredPlayers.splice(index, 1);
   }
 
-  // Aggiungi un metodo per aggiungere un giocatore a "losers"
-  addToLosers(playerName: string): void {
-    this.losers.push(playerName);
+  addToLosers(player : any): void {
+    this.losers.push(player);
+    const index = this.filteredPlayers.findIndex((x) => x.name === player.name);
+    this.filteredPlayers.splice(index, 1);
   }
 
   filterPlayers() {

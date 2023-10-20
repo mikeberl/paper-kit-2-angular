@@ -26,10 +26,10 @@
                           <h5 class="mb-0">{{ player.name }}</h5>
                         </div>
                         <div class="buttons-wl position">
-                          <button class="btn btn-round btn-icon bg-success btn-pick" (click)="addToWinners(player.name)">
+                          <button class="btn btn-round btn-icon bg-success btn-pick" (click)="addToWinners(player)">
                             <i class="fa fa-arrow-up" aria-hidden="true"></i>
                           </button>
-                          <button class="btn btn-round btn-icon bg-danger btn-pick" (click)="addToLosers(player.name)">
+                          <button class="btn btn-round btn-icon bg-danger btn-pick" (click)="addToLosers(player)">
                             <i class="fa fa-arrow-down" aria-hidden="true"></i>
                           </button>
                         </div>
@@ -46,7 +46,7 @@
                 <h3>winners</h3>
                 <div class="label-container">
                   <div class="label-item label label-green" *ngFor="let winner of winners; let i = index">
-                    <span class="name">{{ winner }}</span>
+                    <span class="name">{{ winner.name }}</span>
                     <button class="btn-transparent btn" (click)="removeLabel(winners, i)">X</button>
                   </div>
                 </div>
@@ -60,7 +60,7 @@
                 <h3>losers</h3>
                 <div class="label-container">
                   <div class="label-item label label-red" *ngFor="let loser of losers; let i = index">
-                    <span class="name">{{ loser }}</span>
+                    <span class="name">{{ loser.name }}</span>
                     <button class="btn-transparent btn" (click)="removeLabel(losers, i)">X</button>
                   </div>
                 </div>
