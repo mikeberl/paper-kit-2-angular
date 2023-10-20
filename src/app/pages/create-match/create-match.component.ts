@@ -68,10 +68,22 @@ export class CreateMatchComponent {
   winners: any[] = [];
   losers: any[] = [];
 
+  selectedPoints: number = 0;
+
+  // Altre dichiarazioni e metodi del tuo componente
+  // ...
+
+  // Metodo per gestire il cambio del valore dello slider
+  
+
   
 
   constructor() {
     this.filteredPlayers = this.players;
+  }
+
+  onSliderChange(event: any) {
+    this.selectedPoints = event.target.value;
   }
 
   removeLabel(array: any, index: number): void {

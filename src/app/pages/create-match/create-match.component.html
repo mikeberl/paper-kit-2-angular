@@ -67,6 +67,29 @@
               </div>
             </div>
           </div>
+
+          <div class="row player-list-row">
+            <!-- New "winning team points" card -->
+            <div class="colx-1">
+              <div class="card">
+                <h3>Winning Team Points</h3>
+                <div class="slider-container">
+                  <input type="range" min="0" max="30" step="5" [(ngModel)]="selectedPoints">
+                  <span class="slider-value">{{ selectedPoints }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row player-list-row">
+            <!-- New row with buttons -->
+            <div class="colx-1">
+              <div class="button-container">
+                <button class="btn btn-primary half-width">New Match</button>
+                <button class="btn btn-danger half-width">End</button>
+              </div>
+            </div>
+          </div>
           
           
       </div>    

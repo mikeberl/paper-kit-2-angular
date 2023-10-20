@@ -14,6 +14,18 @@ git checkout _nome_del_branch_ per cambiare branch
 
 git stash -> ritorna all'ultimo commit (save)
 
+# TODO FOR CRI
+
+## CREATE MATCH
+
+Da fare:
+- controllare e sistemare visualizzazione da pc
+- slider per i punti, sistemare stile e colori
+- modificare titolo delle carte winners/losers + span label
+- colore bottoni end/new match
+
+Fatto:
+
 
 # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://demos.creative-tim.com/paper-kit-2-angular/)
 
