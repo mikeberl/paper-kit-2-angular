@@ -23,6 +23,7 @@ git stash -> ritorna all'ultimo commit (save)
 - slider per i punti, sistemare stile e colori
 - modificare titolo delle carte winners/losers + span label
 - colore bottoni end/new match
+- adattare colori (credo serva solo per rosso e verde al resto dell'app)
 
 ### Fatto:
 
@@ -39,6 +40,7 @@ git stash -> ritorna all'ultimo commit (save)
 - layout datepicker da sistemare
 - visualizzazione dei punti da sistemare
 - i bottoni edit/ confirm sono troppo simili, soluzioni?
+- adattare colori (credo serva solo per rosso e verde al resto dell'app)
 
 ### Fatto:
 
