@@ -1,0 +1,75 @@
+.section-main-content {
+    padding: 85px 0px 0px;
+    position: relative;
+    background-color: #fff;
+
+    .row {
+        justify-content: center;
+
+        .row-content {
+            margin-bottom: 10px;
+            width: 95vw;
+        }
+    }
+}
+
+.player-chip-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+
+    .player-chip {
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin: 5px 3px;
+        font-weight: bold;
+        font-size: small;
+        display: flex;
+        align-items: center;
+    }
+      
+    .winner-chip {
+        background-color: green;
+        color: white;
+    }
+    
+    .loser-chip {
+        background-color: red;
+        color: white;
+    }
+
+    .name {
+        margin-right: 2px;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+
+    .btn-width {
+        width: 45%;
+    }
+}
+
+.card-points-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .winner-footer,
+    .loser-footer {
+        flex: 1; // Imposta flex-grow a 1
+        flex-basis: 0; // Imposta flex-basis a 0 per farli espandere uniformemente
+    }
+
+    .loser-footer {
+        text-align: end;
+        color: red;
+    }
+
+    .winner-footer {
+        color: green;
+    }
+}

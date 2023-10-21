@@ -10,6 +10,8 @@ export class MatchSubmissionPreviewComponent {
 
   matches : any[] = []; 
 
+  focus;
+
   constructor(private route: ActivatedRoute) {
     // ...
   }
@@ -22,6 +24,7 @@ export class MatchSubmissionPreviewComponent {
         console.log(matches);
         if (matches.length > 0) {
           this.matches = matches;
+          localStorage.setItem("matches", JSON.stringify(this.matches));
         }
         else {
           // just for testing purpose
@@ -34,6 +37,10 @@ export class MatchSubmissionPreviewComponent {
         }
       }
     });
+  }
+
+  saveMatches() {
+    throw new Error('Method not implemented.');
   }
 
 }
