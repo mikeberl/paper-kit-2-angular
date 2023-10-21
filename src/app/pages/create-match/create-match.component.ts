@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-match',
@@ -73,7 +73,7 @@ export class CreateMatchComponent {
   matches: any[] = [];
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private route : ActivatedRoute) {
     this.filteredPlayers = this.players;
   }
 
@@ -144,19 +144,26 @@ export class CreateMatchComponent {
 
   goToPreview() {
     if (this.checkTheInputs()) {
-      this.matches.push( {
-        winners : this.winners,
+      this.matches.push({
+        winners: this.winners,
         losers: this.losers,
-        winpoints : this.selectedPoints,
+        winpoints: this.selectedPoints,
         losepoints: 0 - (this.selectedPoints * (this.winners.length / this.losers.length))
-      })
+      });
+  
       console.log(this.matches);
-      this.router.navigate(['/match-submission-preview']);
-    }
-    else if (this.matches.length > 0) {
+  
+      // Passa i dati tramite ActivatedRoute
+      this.route.queryParams.subscribe(params => {
+        this.router.navigate(['/match-submission-preview'], {
+          queryParams: {
+            matchesData: JSON.stringify(this.matches)
+          }
+        });
+      });
+    } else if (this.matches.length > 0) {
       this.showInvalidMatchEndPopUp();
-    }
-    else {
+    } else {
       return;
     }
   }
