@@ -23,16 +23,16 @@ export class AppComponent implements OnInit {
             }else{
                 window.document.activeElement.scrollTop = 0;
             }
-            this.navbar.sidebarClose();
+            // this.navbar.sidebarClose();
         });
         this.renderer.listen('window', 'scroll', (event) => {
             const number = window.scrollY;
             if (number > 150 || window.pageYOffset > 150) {
                 // add logic
-                navbar.classList.remove('navbar-transparent');
+                //navbar.classList.remove('navbar-transparent');
             } else {
                 // remove logic
-                navbar.classList.add('navbar-transparent');
+                //navbar.classList.add('navbar-transparent');
             }
         });
         var ua = window.navigator.userAgent;

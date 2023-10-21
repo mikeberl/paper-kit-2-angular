@@ -8,6 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MatchSubmissionPreviewComponent {
 
+  matches : any[] = []; 
+
   constructor(private route: ActivatedRoute) {
     // ...
   }
@@ -15,9 +17,21 @@ export class MatchSubmissionPreviewComponent {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       if (params.matchesData) {
-        const matches = JSON.parse(params.matchesData);
+        const matches : any[] = JSON.parse(params.matchesData);
         // Ora puoi utilizzare i dati `matches` nel tuo componente.
         console.log(matches);
+        if (matches.length > 0) {
+          this.matches = matches;
+        }
+        else {
+          // just for testing purpose
+          const matchesFromStorage = JSON.parse(localStorage.getItem("matches"));
+          if (matchesFromStorage == null) {
+            console.log("Should be impossible");
+          }
+          this.matches = matchesFromStorage;
+          console.log(this.matches);
+        }
       }
     });
   }

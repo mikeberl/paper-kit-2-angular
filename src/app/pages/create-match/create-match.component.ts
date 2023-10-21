@@ -152,8 +152,15 @@ export class CreateMatchComponent {
       });
   
       console.log(this.matches);
-  
-      // Passa i dati tramite ActivatedRoute
+      // just for testing 
+      if (localStorage.getItem("matches") === null) {
+        console.log("saving matches for testing purpose");
+        localStorage.setItem("matches", JSON.stringify(this.matches));
+      }
+      else {
+        console.log(localStorage.getItem("matches"));
+      }
+
       this.route.queryParams.subscribe(params => {
         this.router.navigate(['/match-submission-preview'], {
           queryParams: {
