@@ -18,13 +18,38 @@ git stash -> ritorna all'ultimo commit (save)
 
 ## CREATE MATCH
 
-Da fare:
+### Da fare:
 - controllare e sistemare visualizzazione da pc
 - slider per i punti, sistemare stile e colori
 - modificare titolo delle carte winners/losers + span label
 - colore bottoni end/new match
 
-Fatto:
+### Fatto:
+
+### My todos:
+- backTostart() non funziona come dovrebbe
+- finestra di dialogo in caso di end con partite non valide
+- popover con messaggi di errore e error handling
+
+
+## MATCH SUBMISSION PREVIEW
+
+### Da fare:
+- backnav va sistemata e uniformata alle altre barre di navigazione
+- layout datepicker da sistemare
+- visualizzazione dei punti da sistemare
+- i bottoni edit/ confirm sono troppo simili, soluzioni?
+
+### Fatto:
+
+
+### My todos:
+- Refactoring per cri
+- datepicker con data suggerita 
+- il datepicker viene visualizzato sotto la carta successiva va sistemato
+- collegare edit a create-match 
+
+
 
 
 # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://demos.creative-tim.com/paper-kit-2-angular/)
