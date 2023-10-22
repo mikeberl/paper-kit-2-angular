@@ -32,7 +32,7 @@
     }
 }
 .modal-dialog {
-    padding-top: 60px;
+    padding-top: 160px;
 }
 .modal-body{
     padding: 20px 50px;
@@ -84,6 +84,10 @@
     span{
         width: 100%;
     }
+}
+
+.modal-backdrop {
+    z-index: 1040 !important;
 }
 .modal-header:after {
      display: table;

@@ -28,9 +28,9 @@ git stash -> ritorna all'ultimo commit (save)
 ### Fatto:
 
 ### My todos:
-- backTostart() non funziona come dovrebbe
-- finestra di dialogo in caso di end con partite non valide
-- popover con messaggi di errore e error handling
+- backTostart() non funziona come dovrebbe  / DONE
+- finestra di dialogo in caso di end con partite non valide / DONE
+- popover con messaggi di errore e error handling 
 
 
 ## MATCH SUBMISSION PREVIEW

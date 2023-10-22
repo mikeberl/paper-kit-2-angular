@@ -1,5 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+@Component({
+  selector: 'modal-confirm',
+  template: `
+  <div class="modal-header">
+      <h5 class="modal-title text-center">Errors by the last inserted match</h5>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body"> The last game you are trying to register contains some errors. Do you want to continue without it?
+  </div>
+  <div class="modal-footer">
+      <div class="left-side">
+          <button type="button" class="btn btn-default btn-link" (click)="activeModal.close('Close click')">Edit Match</button>
+      </div>
+      <div class="divider"></div>
+      <div class="right-side">
+          <button type="button" class="btn p-btn btn-link" (click)="activeModal.close('Close click')">CONTINUE</button>
+      </div>
+  </div>
+  `
+})
+export class NgbdModalConfirm {
+  @Input() name;
+
+  constructor(public activeModal: NgbActiveModal) {}
+}
 
 @Component({
   selector: 'app-create-match',
@@ -73,7 +102,8 @@ export class CreateMatchComponent {
   matches: any[] = [];
 
 
-  constructor(private router: Router, private route : ActivatedRoute) {
+  constructor(private router: Router, private route : ActivatedRoute,
+              private modalService: NgbModal) {
     this.filteredPlayers = this.players;
   }
 
@@ -138,7 +168,7 @@ export class CreateMatchComponent {
   }
 
   goToPreview() {
-    if (this.checkTheInputs()) {
+    if (false) {
       this.matches.push({
         winners: this.winners,
         losers: this.losers,
@@ -171,6 +201,7 @@ export class CreateMatchComponent {
   }
 
   showInvalidMatchEndPopUp() {
-    throw new Error('Method not implemented.');
+    const modalRef = this.modalService.open(NgbdModalConfirm);
+    modalRef.componentInstance.name = 'World';
   }
 }
