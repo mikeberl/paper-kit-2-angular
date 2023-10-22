@@ -10,7 +10,11 @@
                           <!-- <h5 class="me-3 mb-0">Last matches</h5> -->
                           <input class="form-control" placeholder="yyyy-mm-dd"
                                                name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
-                          <button class="p-btn btn-round p-btn soft-down-shadow-b">Edit</button>
+                          <div class="btn-container">
+                            <button class="p-btn btn-round soft-down-shadow-b">Edit</button>
+                            <button class="danger-btn btn-round">Remove</button>
+                          </div>
+                                               
                       </div>
                       <div class="card-body">
                         <div class="d-flex justify-content-between">

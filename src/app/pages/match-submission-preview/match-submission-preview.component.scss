@@ -13,6 +13,11 @@
     }
 }
 
+.btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .player-chip-container {
     margin: 10px;
     display: flex;

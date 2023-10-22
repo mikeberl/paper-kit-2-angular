@@ -16,7 +16,7 @@ git stash -> ritorna all'ultimo commit (save)
 
 # TODO FOR CRI
 
-## CREATE MATCH
+## CREATE MATCH (http://localhost:4200/#/creatch-match)
 
 ### Da fare:
 - controllare e sistemare visualizzazione da pc
@@ -34,7 +34,7 @@ git stash -> ritorna all'ultimo commit (save)
 - popover con messaggi di errore e error handling 
 
 
-## MATCH SUBMISSION PREVIEW
+## MATCH SUBMISSION PREVIEW (http://localhost:4200/#/match-submission-preview)
 
 ### Da fare:
 - backnav va sistemata e uniformata alle altre barre di navigazione
@@ -51,6 +51,8 @@ git stash -> ritorna all'ultimo commit (save)
 - datepicker con data suggerita 
 - il datepicker viene visualizzato sotto la carta successiva va sistemato
 - collegare edit a create-match 
+
+## SEARCH LEAGUE (http://localhost:4200/#/leagues)
 
 
 
