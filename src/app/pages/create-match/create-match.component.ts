@@ -119,10 +119,6 @@ export class CreateMatchComponent {
   }
 
   backToStart() {
-    this.winners = [];
-    this.losers = [];
-    this.selectedPoints = 0;
-    this.filteredPlayers = this.players;
     this.searchText = '';
     return;
   }
@@ -134,9 +130,8 @@ export class CreateMatchComponent {
         losers: this.losers,
         winpoints : this.selectedPoints,
         losepoints: 0 - (this.selectedPoints * (this.winners.length / this.losers.length))
-      })
+      });
       this.backToStart();
-      console.log(this.matches);
       return;
 
     }
