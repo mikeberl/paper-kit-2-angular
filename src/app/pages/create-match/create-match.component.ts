@@ -144,7 +144,7 @@ export class CreateMatchComponent {
     }
   }
   
-  checkTheInputs() {
+  checkTheInputs(showPopovers : boolean) {
     return true;
   }
 
@@ -154,7 +154,7 @@ export class CreateMatchComponent {
   }
 
   newMatch() {
-    if (this.checkTheInputs()) {
+    if (this.checkTheInputs(true)) {
       this.matches.push( {
         winners : this.winners,
         losers: this.losers,
@@ -168,7 +168,7 @@ export class CreateMatchComponent {
   }
 
   goToPreview() {
-    if (false) {
+    if (this.checkTheInputs(false)) {
       this.matches.push({
         winners: this.winners,
         losers: this.losers,

@@ -24,6 +24,7 @@ git stash -> ritorna all'ultimo commit (save)
 - modificare titolo delle carte winners/losers + span label
 - colore bottoni end/new match
 - adattare colori (credo serva solo per rosso e verde al resto dell'app)
+- sistemare finestra di dialogo per end su invalid match
 
 ### Fatto:
 
