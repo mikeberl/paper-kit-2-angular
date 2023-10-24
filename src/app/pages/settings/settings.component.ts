@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'app/services/auth.service';
+import { NavbarService } from 'app/services/navbar.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,7 +9,10 @@ import { AuthService } from 'app/services/auth.service';
 })
 export class SettingsComponent {
 
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService,
+    private navbarService: NavbarService) {
+      this.navbarService.selectMenuItem(3);
+     }
               
 
   ngOnInit(): void {

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarService } from 'app/services/navbar.service';
 
 @Component({
   selector: 'modal-confirm',
@@ -103,10 +104,13 @@ export class CreateMatchComponent {
 
 
   constructor(private router: Router, private route : ActivatedRoute,
-              private modalService: NgbModal) {
+              private modalService: NgbModal,
+              private navbarService: NavbarService) {
     this.filteredPlayers = this.players;
+    this.navbarService.selectMenuItem(0);
   }
 
+  
   // slider handler
   onSliderChange(event: any) {
     this.selectedPoints = event.target.value;
