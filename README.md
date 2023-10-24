@@ -54,6 +54,13 @@ git stash -> ritorna all'ultimo commit (save)
 
 ## SEARCH LEAGUE (http://localhost:4200/#/leagues)
 
+## BACK NAVBAR
+
+### Da fare:
+- Design
+
+
+
 
 ## LEAGUE
 
