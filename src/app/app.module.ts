@@ -32,6 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SignupComponent } from './pages/signup/signup.component';
 import { CreateMatchNavbarComponent } from './shared/create-match-navbar/create-match-navbar.component';
 import { MatchSubmissionPreviewComponent } from './pages/match-submission-preview/match-submission-preview.component';
+import { AchievementsComponent } from './pages/home/achievements/achievements.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MatchSubmissionPreviewComponent } from './pages/match-submission-previe
     SignupComponent,
     CreateMatchNavbarComponent,
     MatchSubmissionPreviewComponent,
+    AchievementsComponent,
   ],
   imports: [
     BrowserModule,

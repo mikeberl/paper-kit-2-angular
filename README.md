@@ -55,6 +55,12 @@ git stash -> ritorna all'ultimo commit (save)
 ## SEARCH LEAGUE (http://localhost:4200/#/leagues)
 
 
+## LEAGUE
+
+### My todos
+- quando la pagina é pronta -> leave leguea diventa manage league se super user
+
+
 
 
 # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://demos.creative-tim.com/paper-kit-2-angular/)
