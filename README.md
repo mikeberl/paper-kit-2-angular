@@ -68,6 +68,13 @@ git stash -> ritorna all'ultimo commit (save)
 - quando la pagina é pronta -> leave leguea diventa manage league se super user
 
 
+## SIGNUP
+
+### My todos 
+- error handling if something is not working with the server
+
+
+
 
 
 # [Paper Kit 2 Angular - Free Bootstrap 4 UI Kit](https://demos.creative-tim.com/paper-kit-2-angular/)
