@@ -64,7 +64,6 @@ export class LoginComponent implements OnInit {
     this.authService.verifyCredentials(credentials).subscribe(
       response => {
         console.log(response);
-        console.log("YOU ARE HERE!");
         if (response.result === 'OK') {
           localStorage.setItem('token', response.token);
           this.router.navigate(['/home']);

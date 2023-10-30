@@ -22,7 +22,7 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
 
-  signup(user : User) {
+  signup(user : User) : Observable<any> {
     return this.http.post<any>('http://localhost:8000/signup/', user);
   }
 
