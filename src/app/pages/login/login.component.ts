@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   showAlert: boolean = false; // Variabile per controllare la visibilità dell'alert
   alertType: string = 'danger'; // Tipo di alert (danger = rosso, puoi cambiare in base ai tuoi stili)
-  alertMessage: string = 'Wrong username or password'; // Messaggio dell'alert
+  alertMessage: string = ''; // Messaggio dell'alert
   // emptyFields: boolean = false;
 
   constructor(private authService: AuthService, private router: Router, alertConfig: NgbAlertConfig) {
@@ -69,30 +69,15 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', response.token);
           this.router.navigate(['/home']);
         } else {
-          console.log("Error, alert should be displayed");
+          this.alertMessage = 'Wrong username or password';
           this.showAlert = true; // Mostra l'alert in caso di errore
         }
+      },
+      error => {
+        console.error("An error occurred:", error);
+        this.alertMessage = 'Can\'t connect to the server';
+        this.showAlert = true;
       }
     );
   }
-
-  // login() {
-  //   const credentials: Credentials = {
-  //     username: this.username,
-  //     password: this.password
-  //   };
-  //   this.authService.verifyCredentials(credentials).subscribe(
-  //     response => {
-  //       console.log(response);
-  //       this.showAlert = true;
-  //       if (response.result === 'OK') {
-  //         localStorage.setItem('token', response.token);
-  //         this.router.navigate(['/home']);
-  //       } else {
-  //         console.log("Error, alert should be displayed");
-  //         this.showAlert = true;
-  //       }
-  //     }
-  //   );
-  // }
 }
