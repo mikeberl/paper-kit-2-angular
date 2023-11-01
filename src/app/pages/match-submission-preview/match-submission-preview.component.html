@@ -10,7 +10,7 @@
                           <!-- <h5 class="me-3 mb-0">Last matches</h5> -->
                           <input class="form-control" placeholder="yyyy-mm-dd"
                                                name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
-                          <button class="p-btn btn-round p-btn soft-down-shadow-b">Edit</button>
+                          <button class="s-btn btn-round p-btn soft-down-shadow-b">Edit</button>
                       </div>
                       <div class="card-body">
                         <div class="d-flex justify-content-between">
@@ -41,7 +41,7 @@
         <div class="row">
             <div class="row-content">
               <div class="button-container">
-                <button class="btn btn-round p-btn btn-width" (click)="saveMatches()">Confirm</button>
+                <button class="btn btn-round p-btn btn-width soft-down-shadow-b" (click)="saveMatches()">Confirm</button>
               </div>
             </div>
         </div>
