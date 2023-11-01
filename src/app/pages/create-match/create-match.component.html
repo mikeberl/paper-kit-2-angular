@@ -84,7 +84,7 @@
           <div class="card">
             <h3>Winning Team Points</h3>
             <div class="slider-container">
-              <input type="range" min="0" max="30" step="5" [(ngModel)]="selectedPoints">
+              <input class="slider-point" type="range" min="0" max="30" step="5" [(ngModel)]="selectedPoints">
               <span class="slider-value">{{ selectedPoints }}</span>
             </div>
           </div>
@@ -94,7 +94,7 @@
       <div class="row">
         <div class="row-content">
           <div class="button-container">
-            <button class="btn s-btn btn-width btn-block btn-round soft-down-shadow-b" (click)="newMatch()">New Match</button>
+            <!-- <button class="btn s-btn btn-width btn-block btn-round soft-down-shadow-b" (click)="newMatch()">New Match</button> ctrl kc ku -->
             <button class="btn p-btn btn-width btn-block btn-round soft-down-shadow-b" (click)="goToPreview()">Preview</button>
           </div>
         </div>

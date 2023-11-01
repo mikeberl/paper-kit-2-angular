@@ -16,7 +16,7 @@ git stash -> ritorna all'ultimo commit (save)
 
 # TODO FOR CRI
 
-## CREATE MATCH
+## CREATE MATCH (http://localhost:4200/#/creatch-match)
 
 ### Da fare:
 - controllare e sistemare visualizzazione da pc
@@ -25,6 +25,7 @@ git stash -> ritorna all'ultimo commit (save)
 - colore bottoni end/new match
 - adattare colori (credo serva solo per rosso e verde al resto dell'app)
 - sistemare finestra di dialogo per end su invalid match
+- solo tasto preview
 
 ### Fatto:
 
@@ -34,7 +35,7 @@ git stash -> ritorna all'ultimo commit (save)
 - popover con messaggi di errore e error handling 
 
 
-## MATCH SUBMISSION PREVIEW
+## MATCH SUBMISSION PREVIEW (http://localhost:4200/#/match-submission-preview)
 
 ### Da fare:
 - backnav va sistemata e uniformata alle altre barre di navigazione
@@ -42,6 +43,8 @@ git stash -> ritorna all'ultimo commit (save)
 - visualizzazione dei punti da sistemare
 - i bottoni edit/ confirm sono troppo simili, soluzioni?
 - adattare colori (credo serva solo per rosso e verde al resto dell'app)
+- bottoni edit (matita), remove(bidone)
+- aggiungere new-match + confirm
 
 ### Fatto:
 
@@ -51,6 +54,29 @@ git stash -> ritorna all'ultimo commit (save)
 - datepicker con data suggerita 
 - il datepicker viene visualizzato sotto la carta successiva va sistemato
 - collegare edit a create-match 
+- datepicker senza tabella dati
+
+## SEARCH LEAGUE (http://localhost:4200/#/leagues)
+
+## BACK NAVBAR
+
+### Da fare:
+- Design
+
+
+
+
+## LEAGUE
+
+### My todos
+- quando la pagina é pronta -> leave leguea diventa manage league se super user
+
+
+## SIGNUP
+
+### My todos 
+- error handling if something is not working with the server
+
 
 
 

@@ -98,3 +98,10 @@
     margin: 0;
 }
 
+.slider-point input[type="range"] {
+    /* Cambia il colore del track dello slider */
+    background: linear-gradient(to right, red, blue); /* Un esempio di gradiente di colore */
+    border: none; /* Rimuove il bordo del track, se presente */
+    height: 4px; /* Altezza del track */
+    border-radius: 2px; /* Bordi arrotondati */
+  }
