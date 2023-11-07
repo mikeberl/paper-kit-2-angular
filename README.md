@@ -29,7 +29,7 @@ git stash -> ritorna all'ultimo commit (save)
 
 ### Fatto:
 
-### My todos:
+### Michele:
 - backTostart() non funziona come dovrebbe  / DONE
 - finestra di dialogo in caso di end con partite non valide / DONE
 - popover con messaggi di errore e error handling 
@@ -49,7 +49,7 @@ git stash -> ritorna all'ultimo commit (save)
 ### Fatto:
 
 
-### My todos:
+### Michele:
 - Refactoring per cri
 - datepicker con data suggerita 
 - il datepicker viene visualizzato sotto la carta successiva va sistemato
@@ -68,13 +68,13 @@ git stash -> ritorna all'ultimo commit (save)
 
 ## LEAGUE
 
-### My todos
+### Michele
 - quando la pagina é pronta -> leave leguea diventa manage league se super user
 
 
 ## SIGNUP
 
-### My todos 
+### Michele
 - error handling if something is not working with the server
 
 

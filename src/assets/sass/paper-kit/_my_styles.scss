@@ -3,11 +3,22 @@
 ///////////////////////////////////////////////////////////////
 .ss-success {
     color: #14CDC8;
-
   }
 
 .ss-danger {
     color: #FF735E;
+  }
+
+.p-color {
+    color: #ffa804;
+  }
+
+.s-color {
+    color:#3C404C;
+  }
+
+.white-color {
+    color:#FFFFFF;
   }
 
 ///////////////////////////////////////////////////////////////
@@ -20,14 +31,6 @@
 
 .bg-danger {
     background-color: #FF735E;
-  }
-
-.bg-success2 {
-    background-color: #7FD1B9;
-  }
-
-.bg-danger2 {
-    background-color: #E56399;
   }
 
 .bg-transparent {
@@ -54,6 +57,10 @@
 
 .bg-s {
     background: linear-gradient(45deg, #3C404C, #30323a);
+}
+
+.bg-gradient-gray {
+    background: linear-gradient(45deg, rgb(205, 205, 205), rgb(151, 151, 151));
 }
 
 ///////////////////////////////////////////////////////////////
