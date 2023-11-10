@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 import { Router } from '@angular/router';
@@ -20,6 +20,26 @@ export class AuthService {
   logout() {
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
+  }
+
+  test() {
+    const token = localStorage.getItem('token');
+    console.log("Token is: ", token);
+  
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+  
+    const options = { headers: headers };
+  
+    this.http.get<any>('http://localhost:8000/secure-endpoint', options).subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.error("An error occurred:", error);
+      }
+    );
   }
 
   signup(user : User) : Observable<any> {

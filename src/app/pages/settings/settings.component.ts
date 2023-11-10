@@ -22,4 +22,5 @@ export class SettingsComponent {
     this.authService.logout();
   }
 
+
 }

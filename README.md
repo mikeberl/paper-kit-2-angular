@@ -25,6 +25,7 @@ git stash -> ritorna all'ultimo commit (save)
 - colore bottoni end/new match
 - adattare colori (credo serva solo per rosso e verde al resto dell'app)
 - sistemare finestra di dialogo per end su invalid match
+- solo tasto preview
 
 ### Fatto:
 
@@ -42,6 +43,8 @@ git stash -> ritorna all'ultimo commit (save)
 - visualizzazione dei punti da sistemare
 - i bottoni edit/ confirm sono troppo simili, soluzioni?
 - adattare colori (credo serva solo per rosso e verde al resto dell'app)
+- bottoni edit (matita), remove(bidone)
+- aggiungere new-match + confirm
 
 ### Fatto:
 
@@ -51,6 +54,7 @@ git stash -> ritorna all'ultimo commit (save)
 - datepicker con data suggerita 
 - il datepicker viene visualizzato sotto la carta successiva va sistemato
 - collegare edit a create-match 
+- datepicker senza tabella dati
 
 ## SEARCH LEAGUE (http://localhost:4200/#/leagues)
 
