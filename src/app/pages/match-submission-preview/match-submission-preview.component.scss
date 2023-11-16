@@ -35,12 +35,12 @@
     }
       
     .winner-chip {
-        background-color: green;
+        background-color: #14CDC8;
         color: white;
     }
     
     .loser-chip {
-        background-color: red;
+        background-color: #FF735E;
         color: white;
     }
 
@@ -51,7 +51,7 @@
 
 .button-container {
     display: flex;
-    justify-content: end;
+    justify-content: center;
 
     .btn-width {
         width: 45%;
@@ -71,10 +71,10 @@
 
     .loser-footer {
         text-align: end;
-        color: red;
+        color: #FF735E;
     }
 
     .winner-footer {
-        color: green;
+        color: #14CDC8;
     }
 }

@@ -65,14 +65,15 @@
     }
       
     .winner-chip {
-        background-color: green;
+        // background-color: #14CDC8;
         color: white;
     }
     
     .loser-chip {
-        background-color: red;
+        // background-color: #FF735E;
         color: white;
     }
+    // 86d9ab
 
     .name {
         margin-right: 2px;
@@ -93,6 +94,15 @@
         width: 45%;
     }
 }
+  
+.vertical-text h3 {
+    margin: 0;
+}
 
-
-
+.slider-point input[type="range"] {
+    /* Cambia il colore del track dello slider */
+    background: linear-gradient(to right, red, blue); /* Un esempio di gradiente di colore */
+    border: none; /* Rimuove il bordo del track, se presente */
+    height: 4px; /* Altezza del track */
+    border-radius: 2px; /* Bordi arrotondati */
+  }
