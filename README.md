@@ -46,7 +46,7 @@ git stash -> ritorna all'ultimo commit (save)
 
 ### Fatto:
 
-### My todos:
+### Michele:
 - backTostart() non funziona come dovrebbe  / DONE
 - finestra di dialogo in caso di end con partite non valide / DONE
 - popover con messaggi di errore e error handling 
@@ -63,16 +63,37 @@ git stash -> ritorna all'ultimo commit (save)
 - bottoni edit (matita), remove(bidone)
 - aggiungere new-match + confirm
 
-
 ### Fatto:
 
 
-### My todos:
+### Michele:
 - Refactoring per cri
 - datepicker con data suggerita 
 - il datepicker viene visualizzato sotto la carta successiva va sistemato
 - collegare edit a create-match 
 - datepicker senza tabella dati
+
+## SEARCH LEAGUE (http://localhost:4200/#/leagues)
+
+## BACK NAVBAR
+
+### Da fare:
+- Design
+
+
+
+
+## LEAGUE
+
+### Michele
+- quando la pagina é pronta -> leave leguea diventa manage league se super user
+
+
+## SIGNUP
+
+### Michele
+- error handling if something is not working with the server
+
 
 ## SEARCH LEAGUE (http://localhost:4200/#/leagues)
 

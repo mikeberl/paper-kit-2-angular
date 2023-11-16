@@ -1,8 +1,8 @@
 <app-back-navbar></app-back-navbar>
-<div class="wrapper">
+<div class="wrapper ">
 <div class="section">
     <div class="container">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs " id="myTab" role="tablist">
             <ng-container *ngFor="let tabGroup of tabGroups; let i = index">
             <li class="nav-item" role="presentation">
                 <a class="nav-link" id="tab{{ i }}-tab" data-toggle="tab" href="#tab{{ i }}" role="tab" aria-controls="tab{{ i }}" [attr.aria-selected]="i === 0" [class.active]="i === 0">{{ leagues[i] }}</a>
