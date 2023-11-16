@@ -1,3 +1,20 @@
+# NOTE call 16/11
+- mike - last match back da correggere
+- cri - preview cambio colori
+- cri - provare icone
+- home - cambiare colore blu/verde
+- mike - cambiare footer
+- mike - footer nella pagina league
+- mike - detailed stats / leave/join-league + search league button da aggiungere e mettere belli in league
+ ^
+
+## Create match
+barra per i punti e chips da sistemare
+## Preview match
+edit /delete buttons
+allineamento chip
+colori
+
 # Passaggi per caricare scaricare da github x Cri
 
 git pull -> scaricare gli aggiornarmi 
@@ -45,6 +62,7 @@ git stash -> ritorna all'ultimo commit (save)
 - adattare colori (credo serva solo per rosso e verde al resto dell'app)
 - bottoni edit (matita), remove(bidone)
 - aggiungere new-match + confirm
+
 
 ### Fatto:
 
