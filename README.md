@@ -7,12 +7,15 @@ da fare tutta
 ### DONE
 LOGIN
 SIGNUP
-SETTINGS
+
 
 ### HOME
 cambiare colore win (nelle variabili generali): 5 colori -> primario, secondario, grigio, rosso e blu
 cambiare barra superiore delle card (in grigio)
 nella card your league centrare + cambiare il colore del tasto
+
+### SETTINGS
+aggiungere un tasto per accendere all league
 
 ### CREATE MATCH
 aggiungere barra inferiore
@@ -32,6 +35,19 @@ inserire 3 tasti al posti di uno: Nuovo game/nuovo game con nuove squadre / end
 my games diventa all games per visualizzare tutti i match e va nella barra superiore
 quando si apre il game aggiungere un tasto info(+ notifica) 
 quando si apre il game abbiamo 3 tasti e non solo il tasto report (info report hide)
+
+### ALL LEAGUES
+Rimuovere barra inferiore e inserire superiore
+barra di ricerca fuori dalla carta
+aggiungere intestazione alla tabella delle leghe
+rimuovere host per aggiungere spazio
+
+
+### LEAGUE
+da uniformare al design del resto dell'app live session
+
+### PAGINE DA FARE
+profile base
 
 
 
