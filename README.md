@@ -1,3 +1,40 @@
+# STATUS 26/03
+### WELCOME PAGE
+da fare tutta
+
+
+
+### DONE
+LOGIN
+SIGNUP
+SETTINGS
+
+### HOME
+cambiare colore win (nelle variabili generali): 5 colori -> primario, secondario, grigio, rosso e blu
+cambiare barra superiore delle card (in grigio)
+nella card your league centrare + cambiare il colore del tasto
+
+### CREATE MATCH
+aggiungere barra inferiore
+rimuovere barra superiore e trovare posto per scelta leghe (?)
+players in una card
+sistemare punti
+betting points cambiare colore barra superiore della card + sistemare slide punti 
+trovare soluzione visualizzazione nomi
+
+### MATCH-PREVIEW
+barra superiore : cambiare colore e rendere i tasti ad icona
+nella card: cambiare in winners/losers points + aggiungere sezione commenti + altro
+inserire 3 tasti al posti di uno: Nuovo game/nuovo game con nuove squadre / end
+
+
+### LAST MATCHES
+my games diventa all games per visualizzare tutti i match e va nella barra superiore
+quando si apre il game aggiungere un tasto info(+ notifica) 
+quando si apre il game abbiamo 3 tasti e non solo il tasto report (info report hide)
+
+
+
 # NOTE call 16/11
 - mike - last match back da correggere
 - cri - preview cambio colori
