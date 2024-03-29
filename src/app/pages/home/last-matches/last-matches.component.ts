@@ -12,20 +12,7 @@ export class LastMatchesComponent {
   points: Point[] = [];
   private subscription: Subscription;
 
-  constructor(private matchesService: MatchesService) {
-
-  }
-
-  // ngOnInit() {
-  //   // Inizializza la lista matches con almeno 5 elementi
-  //   while (this.matches.length < 2) {
-  //     this.matches.push({ label: '+15' }); // Puoi impostare il valore predefinito come desideri
-  //   }
-  //   while (this.matches.length >=2 && this.matches.length < 4) {
-  //     this.matches.push({ label: '-15' }); // Puoi impostare il valore predefinito come desideri
-  //   }
-  //   this.matches.push({ label: '' });
-  // }
+  constructor(private matchesService: MatchesService) {}
 
   ngOnInit(): void {
     this.getLastFivePointEntries();
