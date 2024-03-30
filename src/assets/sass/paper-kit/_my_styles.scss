@@ -2,11 +2,11 @@
 //colors
 ///////////////////////////////////////////////////////////////
 .ss-success {
-    color: #14CDC8;
+    color: #86d9ab;
   }
 
 .ss-danger {
-    color: #FF735E;
+    color: #F7765f;
   }
 
 .p-color {
@@ -14,7 +14,11 @@
   }
 
 .s-color {
-    color:#3C404C;
+    color:#14cdc8;
+  }
+
+.t-color {
+    color:#7d7474;
   }
 
 .white-color {
@@ -37,10 +41,6 @@
     background-color: transparent;
 }
 
-.bg-white-smoke {
-    background-color: whitesmoke;
-}
-
 .bg-white {
     background-color: white;
 }
@@ -55,12 +55,18 @@
     color: white;
 }
 
-.bg-s {
-    background: linear-gradient(45deg, #3C404C, #30323a);
+.bg-gradient-yellow-teal {
+    // background: linear-gradient(45deg, #ffa804, #fbc436);
+    background: linear-gradient(135deg,#ffa804,#14cdc8);
+    color: white;
 }
 
-.bg-gradient-gray {
-    background: linear-gradient(45deg, rgb(205, 205, 205), rgb(151, 151, 151));
+.bg-gray {
+    background: #7d7474;
+}
+
+.bg-light-gray {
+    background: #ebebeb;
 }
 
 ///////////////////////////////////////////////////////////////
@@ -104,19 +110,19 @@
 }
 
 .s-btn {
-    background: linear-gradient(45deg, #3C404C, #30323a);
+    background: #14CDC8;
     color: white;
     border: none;
 }
 
 .success-btn {
-    background-color: #14CDC8;
+    background-color: #86d9ab;
     color: white;
     border: none;
   }
 
 .danger-btn {
-    background-color: #FF735E;
+    background-color: #f7765f;
     color: white;
     border: none;
   }
