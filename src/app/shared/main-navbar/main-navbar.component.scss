@@ -9,14 +9,14 @@
 }
 
 .btn-unselected {
-    color: black;
+    color: #14cdc8;
 }
 
 .btn-selected {
     top: 0;
     left: 0;
     z-index: -1; /* Posiziona il testo dietro il contenuto principale */
-    background: linear-gradient(45deg, #ffa804, #fbc436); /* Imposta il gradiente da FFA602 a FDCC4A */
+    background: #ffa804; /* Imposta il gradiente da FFA602 a FDCC4A */
     -webkit-background-clip: text; /* Permette al gradiente di riempire il testo */
     color: transparent;
 }
