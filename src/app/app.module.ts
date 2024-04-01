@@ -33,6 +33,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { CreateMatchNavbarComponent } from './shared/create-match-navbar/create-match-navbar.component';
 import { MatchSubmissionPreviewComponent } from './pages/match-submission-preview/match-submission-preview.component';
 import { AchievementsComponent } from './pages/home/achievements/achievements.component';
+import { UploadImageComponent } from './pages/edit/upload-image/upload-image.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { AchievementsComponent } from './pages/home/achievements/achievements.co
     CreateMatchNavbarComponent,
     MatchSubmissionPreviewComponent,
     AchievementsComponent,
+    UploadImageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <div class="section-no-pad">
     <div class="option-buttons">
-        <button type="button" class="btn btn-just-icon s-btn" style="margin: 3px;">
+        <button type="button" class="btn btn-just-icon s-btn" style="margin: 3px;" routerLink="/edit">
             <i class="fa fa-edit"></i>
         </button>
         <button type="button" class="btn btn-just-icon s-btn" style="margin: 3px;" routerLink="/achievements">
@@ -10,7 +10,7 @@
     <div class="container bg-transparent">
         <div class="owner">
             <div class="avatar">
-                <img src="./assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive img-profile">
+                <img [src]="imageURL" alt="Circle Image" class="img-circle img-no-padding img-responsive img-profile">
                 <div class="name">
                     <h4 class="username"> {{ username.toUpperCase() }} </h4>
                 </div>

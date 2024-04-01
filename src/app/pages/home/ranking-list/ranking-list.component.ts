@@ -28,8 +28,6 @@ export class RankingListComponent implements OnInit {
     var user_id = this.authService.user().id;
     this.leagueService.getLeaguesByUser(user_id).subscribe((leagues: League[]) => {
       this.leagues = leagues;
-      console.log("here");
-      console.log(leagues);
       this.leagues.forEach(league => {
         this.getLeagueImage(league._id);
       });
@@ -37,7 +35,6 @@ export class RankingListComponent implements OnInit {
   }
 
   getLeagueImage(id: string): void {
-    console.log(id);
     this.leagueService.getLeagueImage(id).subscribe({
       next: (imageBlob: Blob) => {
         const reader = new FileReader();
