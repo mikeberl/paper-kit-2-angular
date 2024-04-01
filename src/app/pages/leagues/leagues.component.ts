@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { League } from 'app/models/league/league.module';
+import { LeaguesService } from 'app/services/leagues.service';
 
 @Component({
   selector: 'app-leagues',
   templateUrl: './leagues.component.html',
   styleUrls: ['./leagues.component.scss']
 })
-export class LeaguesComponent {
+export class LeaguesComponent implements OnInit {
 
   focus: any;
 
@@ -27,8 +29,41 @@ export class LeaguesComponent {
   searchText: string = '';
   filteredClients: any[] = [];
 
-  constructor() {
-    this.filteredClients = this.clients;
+  leagues: League[] = [];
+  imageURLs: {[key: string]: string} = {};
+
+  constructor(private leagueService: LeaguesService) { }
+
+  ngOnInit(): void {
+    this.loadLeagues();
+  }
+
+  loadLeagues(): void {
+    this.leagueService.getLeagues().subscribe((leagues: League[]) => {
+      this.leagues = leagues;
+      this.leagues.forEach(league => {
+        this.getLeagueImage(league._id);
+      });
+    });
+  }
+
+  getLeagueImage(id: string): void {
+    this.leagueService.getLeagueImage(id).subscribe({
+      next: (imageBlob: Blob) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.imageURLs[id] = reader.result as string;
+        };
+        reader.readAsDataURL(imageBlob);
+      },
+      error: (error: any) => {
+        console.error('Errore durante il recupero dell\'immagine:', error);
+      }
+    });
+  }
+
+  getLeagueImageUrl(id: string): string {
+    return this.imageURLs[id] || '';
   }
 
   filterLeagues() {

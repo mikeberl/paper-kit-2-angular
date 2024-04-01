@@ -13,7 +13,7 @@
                     <li class="list-group-item pt-0" *ngFor="let league of leagues">
                       <div class="d-flex align-items-center">
                         <div class="flex-shrink-0 me-3">
-                          <img [src]="imageURL" alt="" class="avatar rounded-circle" routerLink="/league"/>
+                          <img [src]="getLeagueImageUrl(league._id)" alt="" class="avatar rounded-circle" routerLink="/league"/>
                         </div>
                         <div class="flex-grow-1">
                           <h6 class="mb-0" routerLink="/league" >{{ league.name }}</h6>

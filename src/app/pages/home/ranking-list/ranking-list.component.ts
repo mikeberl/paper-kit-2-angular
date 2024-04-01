@@ -14,41 +14,46 @@ export class RankingListComponent implements OnInit {
   private subscription: Subscription;
   imageURL: string;
   leagues : League[] = [];
+  imageURLs: {[key: string]: string} = {};
 
-  constructor(private leaguesService : LeaguesService,
+  constructor(private leagueService : LeaguesService,
             private authService : AuthService) {
   }
 
-  ngOnInit() {
-    this.getLeague();
-    this.getLeagueImage();
+  ngOnInit(): void {
+    this.loadLeagues();
   }
 
-  getLeague() {
-    const userId = this.authService.user().id;
-    this.subscription = this.leaguesService.getLeaguesByUser(userId).subscribe({
-      next: (data) => {
-        this.leagues = data.leagues;
+  loadLeagues(): void {
+    var user_id = this.authService.user().id;
+    this.leagueService.getLeaguesByUser(user_id).subscribe((leagues: League[]) => {
+      this.leagues = leagues;
+      console.log("here");
+      console.log(leagues);
+      this.leagues.forEach(league => {
+        this.getLeagueImage(league._id);
+      });
+    });
+  }
+
+  getLeagueImage(id: string): void {
+    console.log(id);
+    this.leagueService.getLeagueImage(id).subscribe({
+      next: (imageBlob: Blob) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.imageURLs[id] = reader.result as string;
+        };
+        reader.readAsDataURL(imageBlob);
       },
-      error: (error) => {
-        console.error('Error:', error);
+      error: (error: any) => {
+        console.error('Errore durante il recupero dell\'immagine:', error);
       }
     });
   }
 
-  getLeagueImage(): void {
-    this.leaguesService.getLeagueImage().subscribe(
-      (imageBlob: Blob) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          this.imageURL = reader.result as string;
-        };
-        reader.readAsDataURL(imageBlob);
-      },
-      error => {
-        console.error('Errore durante il recupero dell\'immagine:', error);
-      }
-    );
+  getLeagueImageUrl(id: string): string {
+    return this.imageURLs[id] || '';
   }
 
   ngOnDestroy() {

@@ -18,15 +18,19 @@ export class LeaguesService {
       return this.http.get<any>(`http://localhost:8000/get-leagues-by-user/${userId}`);
     }  
 
-    getLeagueImage(): Observable<Blob> {
+    getLeagueImage(leagueId : string): Observable<Blob> {
       const token = this.authService.user().token;
 
-      const url = `http://localhost:8000/get-league-image/1.jpg`;
+      const url = `http://localhost:8000/get-league-image/${leagueId}`;
       const headers = new HttpHeaders({
         'Authorization': `Bearer ${token}`,
         'Accept': 'image/jpeg',
         'Content-Type': 'image/jpeg'
       });
       return this.http.get(url, { headers, responseType: 'blob' });
+    }
+
+    getLeagues() : Observable<any> {
+      return this.http.get<any>(`http://localhost:8000/get-leagues/`);
     }
 }

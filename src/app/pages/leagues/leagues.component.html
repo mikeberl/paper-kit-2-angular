@@ -16,20 +16,20 @@
                 <div class="card">
                   <div class="">
                     <ul class="list-group list-group-flush">
-                      <li class="league-list-group-item pt-0" *ngFor="let client of filteredClients">
+                      <li class="league-list-group-item pt-0" *ngFor="let league of leagues">
                         <div class="d-flex align-items-center">
                           <div class="flex-shrink-0 me-3">
-                            <img [src]="client.imageSrc" alt="" class="avatar rounded-circle" routerLink="/league"/>
+                            <img [src]="getLeagueImageUrl(league._id)" alt="" class="avatar rounded-circle" routerLink="/league"/>
                           </div>
                           <div class="flex-grow-1">
-                            <h5 class="mb-0" routerLink="/league">{{ client.name }}</h5>
-                            <a routerLink="/league"> Host by: Roundnet Bolzano</a>
+                            <h5 class="mb-0" routerLink="/league">{{ league.name }}</h5>
+                            <a routerLink="/league"> Host by: {{ league.owner }}</a>
                           </div>
                           <div class="flex-shrink-0 position">
                             <span class="mb-0 text-muted" routerLink="/league">
-                                Players
+                                Played in:
                             </span>
-                            <p>{{ client.amount }}</p>
+                            <p>{{ league.location }}</p>
                             
                           </div>
                         </div>
