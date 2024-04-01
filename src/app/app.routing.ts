@@ -31,7 +31,7 @@ const routes: Routes =[
     { path: 'login',           component: LoginComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'home',      component: HomeComponent },
+    { path: 'home',      component: HomeComponent , canActivate: [AuthGuard]},
     { path: 'leagues',    component: LeaguesComponent},
     { path: 'matches',    component: MatchesContainerComponent},
     { path: 'create-match', component: CreateMatchComponent},

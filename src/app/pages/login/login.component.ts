@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbAlertConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Credentials } from 'app/models/credentials/credentials.module';
+import { LoggedUser } from 'app/models/user/user.module';
 import { AuthService } from 'app/services/auth.service';
 
 @Component({
@@ -61,11 +62,14 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password
     };
-    this.authService.verifyCredentials(credentials).subscribe(
+    this.authService.login(credentials).subscribe(
       response => {
-        console.log(response);
+        // console.log(response);
         if (response.result === 'OK') {
-          localStorage.setItem('token', response.token);
+          var user : LoggedUser = new LoggedUser(response.user._id, response.user.email, 
+                      response.user.username, response.user.password, response.user.leagues, response.token)
+          //localStorage.setItem('token', response.token);
+          this.authService.registerUser(user);
           this.router.navigate(['/home']);
         } else {
           this.alertMessage = 'Wrong username or password';
