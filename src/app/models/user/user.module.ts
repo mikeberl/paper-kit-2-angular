@@ -13,6 +13,7 @@ export class LoggedUser extends User {
 
   constructor(id: string, email: string, username : string, password: string, leagues : League[], token : string) {
     super();
+    this.id = id;
     this.email = email;
     this.username = username;
     this.password = password;

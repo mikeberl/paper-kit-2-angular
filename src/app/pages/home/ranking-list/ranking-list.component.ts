@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { League } from 'app/models/league/league.module';
+import { AuthService } from 'app/services/auth.service';
 import { LeaguesService } from 'app/services/leagues.service';
 import { Subscription } from 'rxjs';
 
@@ -12,22 +13,10 @@ export class RankingListComponent implements OnInit {
 
   private subscription: Subscription;
   imageURL: string;
-  leagues : League[] = [
-    // {
-    //   name: 'Inara Britt',
-    //   location: 'Georgia, USA',
-    //   imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-    //   amount: '13 / 30'
-    // },
-    // {
-    //   name: 'Inara Britt',
-    //   location: 'Georgia, USA',
-    //   imageSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-    //   amount: '1 / 2'
-    // },
-  ];
+  leagues : League[] = [];
 
-  constructor(private leaguesService : LeaguesService) {
+  constructor(private leaguesService : LeaguesService,
+            private authService : AuthService) {
   }
 
   ngOnInit() {
@@ -36,7 +25,7 @@ export class RankingListComponent implements OnInit {
   }
 
   getLeague() {
-    const userId = '6606d3837cefc7772725bb5d';
+    const userId = this.authService.user().id;
     this.subscription = this.leaguesService.getLeaguesByUser(userId).subscribe({
       next: (data) => {
         this.leagues = data.leagues;

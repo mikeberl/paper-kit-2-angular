@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Point } from 'app/models/point/point.module';
+import { AuthService } from 'app/services/auth.service';
 import { MatchesService } from 'app/services/matches.service';
 import { Subscription } from 'rxjs';
 
@@ -12,7 +13,8 @@ export class LastMatchesComponent {
   points: Point[] = [];
   private subscription: Subscription;
 
-  constructor(private matchesService: MatchesService) {}
+  constructor(private matchesService: MatchesService, 
+            private authService : AuthService) {}
 
   ngOnInit(): void {
     this.getLastFivePointEntries();
@@ -20,7 +22,8 @@ export class LastMatchesComponent {
   }
 
   getLastFivePointEntries() {
-    const userId = '654cbc816598b8364c664b84'; // Inserisci l'ID del tuo utente
+    console.log(this.authService.user());
+    const userId = this.authService.user().id; // Inserisci l'ID del tuo utente
     this.subscription = this.matchesService.getLastFivePointEntriesByUser(userId).subscribe({
       next: (data) => {
         this.points = data.point_entries;

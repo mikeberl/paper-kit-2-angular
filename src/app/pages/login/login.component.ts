@@ -66,6 +66,7 @@ export class LoginComponent implements OnInit {
       response => {
         // console.log(response);
         if (response.result === 'OK') {
+          console.log(response.user);
           var user : LoggedUser = new LoggedUser(response.user._id, response.user.email, 
                       response.user.username, response.user.password, response.user.leagues, response.token)
           //localStorage.setItem('token', response.token);
